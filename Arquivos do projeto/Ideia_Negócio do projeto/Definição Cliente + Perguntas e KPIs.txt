@@ -1,0 +1,94 @@
+CLIENTE
+Equipe de Inteligência de Campanha de um Deputado Estadual do PSDB-SP que vai disputar a reeleição
+
+ESCOPO REGIONAL
+Estado de São Paulo - Eleições de 2022
+
+BASES
+https://dadosabertos.tse.jus.br/dataset/resultados-2022/resource/5c375ecc-9c40-4c75-921c-686a920c150a
+https://dadosabertos.tse.jus.br/dataset/resultados-2022/resource/9f042e8b-ed41-4b18-a01b-e0613a68d90c
+https://dadosabertos.tse.jus.br/organization/tse-agel?tags=Ano+2022
+
+TEMA
+Diagnóstico de Vulnerabilidade e Defesa Territorial de Redutos Históricos. Traremos KPIs que ajudem na preservação e reconquista de territórios eleitorais sob ataque de partidos rivais
+
+DOR DO CLIENTE
+Historicamente, o PSDB dominava diversos municípios do interior e regiões metropolitanas de SP. Com as mudanças políticas recentes, partidos concorrentes (como PSD, PL e Republicanos) avançaram sobre esses locais. O deputado precisa descobrir onde seu reduto foi "invadido" (onde perdeu votos), em quais colégios eleitorais a base permaneceu fiel e em quais locais o eleitor deixou de votar nele para votar apenas na legenda de outros partidos
+
+Com essa pesquisa, o cliente evita gastar dinheiro do Fundo Eleitoral panfletando em locais onde seu eleitorado já migrou para a concorrência, focando os recursos financeiros e a presença física apenas nas zonas de recuperação viável e defesa de base
+
+
+PERGUNTAS
+1.Quais locais de votação (NM_LOCAL_VOTACAO) nos redutos históricos do candidato registraram a maior queda de Market Share?
+BASE USADA: votacao_secao_2022_SP
+DECISÃO: Enviar equipes de auditoria política e lideranças locais para entender o motivo da perda de votos naquela comunidade.
+
+2.Em quais municípios e colégios eleitorais o candidato manteve dominância superior a 25% dos votos válidos do cargo?
+BASE USADA: votacao_secao_2022_SP
+DECISÃO: Blindar esses locais prioritários com presença física constante para evitar invasões da concorrência no pleito seguinte.
+
+3.Quais Zonas Eleitorais do interior apresentam a menor diferença percentual de votos entre o nosso candidato e o concorrente líder (Swing Zones)?
+BASE USADA: votacao_secao_2022_SP
+DECISÃO: Direcionar recursos de reta final de campanha e carreatas para locais onde uma pequena virada garante a liderança regional.
+
+4.Nos locais de votação onde o candidato perdeu espaço, o eleitor migrou para votos em outros candidatos (nominais) ou para votos de legenda partidária?
+BASE USADA: votacao_secao_2022_SP
+DECISÃO: Definir se a propaganda deve atacar a imagem do candidato adversário ou a marca do partido rival.
+
+5.Quais locais de votação concentram o maior volume absoluto de eleitores nos municípios classificados como redutos vulneráveis?
+BASE USADA: votacao_secao_2022_SP
+DECISÃO: Posicionar estrategicamente os militantes de boca de urna legalizada nos maiores polos de votação do município.
+
+6.Qual é a taxa de abstenção de eleitores registrados nas seções que compõem os principais colégios eleitorais fiéis ao candidato?
+BASE USADA: votacao_secao_2022_SP + detalhe_votacao_secao_2022 (comparecimento e abstenção)
+DECISÃO: Criar campanhas de mobilização e transporte no dia do pleito para garantir que o eleitor fiel não deixe de votar.
+
+7.Qual é o grau de dependência da votação total do partido no município em relação à votação individual do nosso candidato?
+BASE USADA: votacao_secao_2022_SP
+DECISÃO: Negociar maior fatia do tempo de rádio/TV e do Fundo Eleitoral com o diretório estadual da sigla.
+
+8.Qual é o perfil demográfico (faixa etária e escolaridade) predominante nos locais de votação onde o candidato teve seu pior desempenho?
+BASE USADA: votacao_secao_2022_SP + perfil eleitorado
+DECISÃO: Redefinir as pautas de propostas e a linguagem da comunicação digital para dialogar com essa fatia demográfica.
+
+9.Em quais locais de votação houve aumento significativo de votos nulos e brancos para Deputado Estadual dentro do nosso reduto?
+BASE USADA: votacao_secao_2022_SP
+DECISÃO: Realizar panfletagem pedagógica sobre a importância do voto proporcional e como digitar o número do candidato na urna.
+
+10.Como se distribui a concorrência direta de outros candidatos da própria coligação/federação nos colégios eleitorais do deputado?
+BASE USADA: votacao_secao_2022_SP
+DECISÃO: Identificar áreas de "canibalização interna" e pactuar divisões de território com colegas do mesmo partido.
+
+
+KPI'S
+1.Índice de Erosão Territorial (IET)
+FÓRMULA: IET(%) = 100 - ((Votos do Candidato no Local no Pleito Atual / Votos do Candidato no Local no Pleito Anterior) * 100)
+PERGUNTAS RELACIONADAS: 1 e 9
+
+2.Margem de Dominância de Reduto (MDR)
+FÓRMULA: MDR(%) = (Total de Votos Nominais do Candidato no Município / Total de Votos Válidos para Deputado Estadual no Município) * 100
+PERGUNTAS RELACIONADAS: 2 e 7
+
+3.Margem de Disputa Local (MDL)
+FÓRMULA: MDL(p.p.) = ((Votos do Nosso Candidato na Zona - Votos do Concorrente Direto na Zona) / Total de Votos Válidos do Cargo na Zona) * 100
+PERGUNTAS RELACIONADAS: 3 e 10
+
+4.Taxa de Voto Partidário Residual (TVPR)
+FÓRMULA: TVPR(%) = (Votos de Legenda na Sigla Rival no Local / Votos Válidos Totais do Cargo no Local) * 100
+PERGUNTAS RELACIONADAS: 4 e 7
+
+5.Taxa de Abstenção na Base (TAB)
+FÓRMULA: TAB(%) = (Total de Eleitores Ausentes na Seção / Total de Eleitores Aptos na Seção) * 100
+PERGUNTAS RELACIONADAS: 5 e 6
+
+6.Índice de Canibalização Partidária (ICP)
+FÓRMULA: ICP(%) = (Votos de Outros Candidatos do Mesmo Partido no Município / Votos Nominais Totais do Partido no Município) * 100
+PERGUNTAS RELACIONADAS: 7 e 10
+
+7.Índice de Alienação no Reduto (IAR)
+FÓRMULA: IAR(%) = ((Votos Brancos [95] + Votos Nulos [96]) no Local / QT_VOTOS Total do Cargo no Local) * 100
+PERGUNTAS RELACIONADAS: 1 e 9
+
+8.Concentração Territorial do Local (CTL)
+FÓRMULA: CTL(%) = (QT_VOTOS no Local de Votação (Cargo Ref.) / QT_VOTOS no Município (Cargo Ref.)) * 100
+PERGUNTAS RELACIONADAS: 2 e 5

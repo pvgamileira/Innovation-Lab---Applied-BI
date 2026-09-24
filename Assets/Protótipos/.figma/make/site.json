@@ -1,0 +1,10 @@
+{
+  "description": "Replicates images accurately to assist users in creating faithful visual copies for design, art, or reference purposes with ease and precision.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

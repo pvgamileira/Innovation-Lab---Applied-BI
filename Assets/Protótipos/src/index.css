@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --bg: #07091a;
+  --card: #0c1028;
+  --card2: #0f1535;
+  --border: #1e2650;
+  --text: #e8eaf6;
+  --text-muted: #9fa8da;
+  --red: #e53935;
+  --green: #43a047;
+  --green2: #66bb6a;
+  --gray: #757575;
+  --dark-red: #b71c1c;
+  --yellow: #f9a825;
+  --blue: #1565c0;
+  --blue2: #1e88e5;
+  --teal: #00897b;
+  --purple: #5c6bc0;
+  --cyan: #00bcd4;
+  --orange: #ef6c00;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard {
+  width: 100%;
+  min-width: 1200px;
+  padding: 0;
+  overflow-x: auto;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.kpi-value {
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.section-title {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.recharts-text { fill: var(--text); }
+.recharts-cartesian-axis-tick-value { fill: var(--text-muted) !important; font-size: 10px; }
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  body {
+    background: var(--bg) !important;
+  }
+}
