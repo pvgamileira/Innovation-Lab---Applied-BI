@@ -1,4 +1,4 @@
-# 📊 Engenharia de Dados para BI: Análise Eleitoral TSE (Start Phoenix Consultoria)
+# 📊 Engenharia de Dados para BI: Análise Eleitoral TSE (StarPhoenix Consultoria)
 
 Este repositório documenta a esteira de Engenharia de Dados desenvolvida para o Projeto Integrador de Business Intelligence (Faculdade Impacta). Atuando como a equipe de inteligência da campanha da deputada estadual Ana Carolina Serra (PSDB-SP), nosso objetivo foi processar bases massivas do Tribunal Superior Eleitoral (TSE) para viabilizar decisões estratégicas de campanha.
 
