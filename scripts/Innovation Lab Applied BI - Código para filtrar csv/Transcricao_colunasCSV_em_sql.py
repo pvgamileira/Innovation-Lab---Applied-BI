@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Coloque o caminho do seu arquivo de 4GB aqui
-arquivo = r"C:\Impacta\Innovation Lab\Innovation Lab Applied BI\CSV - TSE\votacao_secao_2022_SP_FiltroCargo7_DeputadoEstadual.csv"
+arquivo = r"C:\Innovation-Lab---Applied-BI\CSV - TSE\detalhe_votacao_secao_2022_SP.csv"
 
 # nrows=0 faz o Pandas ler APENAS o cabeçalho (a linha 1), ignorando os 4GB de dados. É instantâneo!
 df = pd.read_csv(arquivo, sep=";", encoding="latin1", nrows=0)
