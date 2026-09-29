@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+CSV - TSE/consulta_cand_2022_SP.csv
+PDF - 5Qand3KPIs.pdf
+CSV - TSE/detalhe_votacao_secao_2022_SP.csv
