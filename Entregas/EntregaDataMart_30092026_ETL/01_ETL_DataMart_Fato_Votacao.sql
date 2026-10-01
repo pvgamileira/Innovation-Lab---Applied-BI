@@ -43,5 +43,3 @@ INTO dbo.Fato_Votacao_Historica
 from historico_votos_codigo7 hv
 left join dbo.Staging_Consulta_Cand_2022_SP cc 
 	on hv.NR_VOTAVEL = cc.NR_CANDIDATO
-
-select top 1000 * from dbo.Fato_Votacao_Historica
