@@ -364,3 +364,9 @@ FodyWeavers.xsd
 CSV - TSE/consulta_cand_2022_SP.csv
 PDF - 5Qand3KPIs.pdf
 CSV - TSE/detalhe_votacao_secao_2022_SP.csv
+
+
+# -- ARQUIVOS ADICIONADOS AO GITIGNORE --
+CSV - TSE/*.csv
+Arquivos do projeto/Agent/instancia.env
+Arquivos do projeto/Anota*/*
