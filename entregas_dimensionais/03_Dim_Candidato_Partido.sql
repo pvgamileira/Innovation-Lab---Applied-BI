@@ -20,9 +20,9 @@ values
     ('96', '96', 'VOTO NULO', 'DEPUTADO ESTADUAL', 'N/A', 'SEM FEDERAÇÃO', 0);
 
 with Candidatos_Todos as (
-    select cast(SQ_CANDIDATO as varchar(20)) as NK_CANDIDATO, cast(NR_CANDIDATO as varchar(10)) as NR_CANDIDATO, coalesce(NM_URNA_CANDIDATO, NM_CANDIDATO) as NM_URNA_CANDIDATO, DS_CARGO as DS_CARGO, SG_PARTIDO as SG_PARTIDO, coalesce(SG_FEDERACAO, 'SEM FEDERAÇÃO') as SG_FEDERACAO from dbo.Staging_Consulta_Cand_2022_SP where DS_CARGO = 'DEPUTADO ESTADUAL'
+    select cast(SQ_CANDIDATO as varchar(20)) as NK_CANDIDATO, cast(NR_CANDIDATO as varchar(10)) as NR_CANDIDATO, NM_URNA_CANDIDATO, DS_CARGO as DS_CARGO, SG_PARTIDO as SG_PARTIDO, coalesce(nullif(SG_FEDERACAO, '#NULO'), 'SEM FEDERAÇÃO') as SG_FEDERACAO from dbo.Staging_Consulta_Cand_2022_SP where DS_CARGO = 'DEPUTADO ESTADUAL'
     union
-    select cast(SQ_CANDIDATO as varchar(20)) as NK_CANDIDATO, cast(NR_CANDIDATO as varchar(10)) as NR_CANDIDATO, coalesce(NM_URNA_CANDIDATO, NM_CANDIDATO) as NM_URNA_CANDIDATO, DS_CARGO as DS_CARGO, SG_PARTIDO as SG_PARTIDO, coalesce(SG_FEDERACAO, 'SEM FEDERAÇÃO') as SG_FEDERACAO from dbo.Staging_Consulta_Cand_2018_SP where DS_CARGO = 'DEPUTADO ESTADUAL'
+    select cast(SQ_CANDIDATO as varchar(20)) as NK_CANDIDATO, cast(NR_CANDIDATO as varchar(10)) as NR_CANDIDATO, NM_URNA_CANDIDATO, DS_CARGO as DS_CARGO, SG_PARTIDO as SG_PARTIDO, coalesce(nullif(SG_FEDERACAO, '#NULO'), 'SEM FEDERAÇÃO') as SG_FEDERACAO from dbo.Staging_Consulta_Cand_2018_SP where DS_CARGO = 'DEPUTADO ESTADUAL'
 ),
 Concentracao_Candidatos as (
     select c.SQ_CANDIDATO, sum(v.QT_VOTOS) as VOTOS_TOTAIS_ESTADO, sum(case when v.CD_MUNICIPIO in (select CD_MUNICIPIO from dbo.Dim_Local_Votacao where FL_GRANDE_ABC = 1 or FL_RMSP = 1) then v.QT_VOTOS else 0 end) as VOTOS_REGIAO
@@ -41,7 +41,7 @@ where not exists (select 1 from dbo.Dim_Candidato_Partido d where d.NK_CANDIDATO
 
 insert into dbo.Dim_Candidato_Partido (NK_CANDIDATO, NR_CANDIDATO, NM_URNA_CANDIDATO, DS_CARGO, SG_PARTIDO, SG_FEDERACAO, FL_CONCORRENTE_REGIONAL)
 select distinct
-    left(v.NR_VOTAVEL, 2) as NK_CANDIDATO, left(v.NR_VOTAVEL, 2) as NR_CANDIDATO, concat('VOTO DE LEGENDA - PARTIDO ', left(v.NR_VOTAVEL, 2)) as NM_URNA_CANDIDATO, 'DEPUTADO ESTADUAL' as DS_CARGO, coalesce(c.SG_PARTIDO, concat('PTDO_', left(v.NR_VOTAVEL, 2))) as SG_PARTIDO, coalesce(c.SG_FEDERACAO, 'SEM FEDERAÇÃO') as SG_FEDERACAO, 0 as FL_CONCORRENTE_REGIONAL
+    left(v.NR_VOTAVEL, 2) as NK_CANDIDATO, left(v.NR_VOTAVEL, 2) as NR_CANDIDATO, concat('VOTO DE LEGENDA - PARTIDO ', left(v.NR_VOTAVEL, 2)) as NM_URNA_CANDIDATO, 'DEPUTADO ESTADUAL' as DS_CARGO, coalesce(c.SG_PARTIDO, concat('PTDO_', left(v.NR_VOTAVEL, 2))) as SG_PARTIDO, coalesce(nullif(c.SG_FEDERACAO, '#NULO'), 'SEM FEDERAÇÃO') as SG_FEDERACAO, 0 as FL_CONCORRENTE_REGIONAL
 from dbo.Staging_VotacaoSecao_2022_SP v
 left join dbo.Staging_Consulta_Cand_2022_SP c on left(v.NR_VOTAVEL, 2) = cast(c.NR_PARTIDO as varchar)
 where len(v.NR_VOTAVEL) = 2 and v.NR_VOTAVEL not in ('95', '96') and not exists (select 1 from dbo.Dim_Candidato_Partido d where d.NK_CANDIDATO = left(v.NR_VOTAVEL, 2));
