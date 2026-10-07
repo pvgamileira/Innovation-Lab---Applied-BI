@@ -1,30 +1,28 @@
-﻿if object_id('dbo.dim_perfil_demografico_bkp', 'u') is not null drop table dbo.dim_perfil_demografico_bkp;
-if object_id('dbo.dim_perfil_demografico', 'u') is not null select * into dbo.dim_perfil_demografico_bkp from dbo.dim_perfil_demografico;
-if object_id('dbo.dim_perfil_demografico', 'u') is not null drop table dbo.dim_perfil_demografico;
+﻿if object_id('dbo.Dim_Perfil_Demografico', 'u') is not null drop table dbo.Dim_Perfil_Demografico;
 
-create table dbo.dim_perfil_demografico (
-    sk_perfil_demografico int identity(1,1) not null,
-    nk_perfil_demografico varchar(50) not null,
-    cd_faixa_etaria int not null,
-    ds_faixa_etaria varchar(50) not null,
-    cd_escolaridade int not null,
-    ds_escolaridade varchar(100) not null,
-    cd_genero int not null,
-    ds_genero varchar(50) not null,
-    constraint pk_dim_perfil_demografico primary key (sk_perfil_demografico),
-    constraint uq_dim_perfil_demografico_nk unique (nk_perfil_demografico)
+create table dbo.Dim_Perfil_Demografico (
+    SK_PERFIL_DEMOGRAFICO int identity(1,1) not null,
+    NK_PERFIL_DEMOGRAFICO varchar(50) not null,
+    CD_FAIXA_ETARIA int not null,
+    DS_FAIXA_ETARIA varchar(50) not null,
+    CD_ESCOLARIDADE int not null,
+    DS_ESCOLARIDADE varchar(100) not null,
+    CD_GENERO int not null,
+    DS_GENERO varchar(50) not null,
+    constraint PK_Dim_Perfil_Demografico primary key (SK_PERFIL_DEMOGRAFICO),
+    constraint UQ_Dim_Perfil_Demografico_NK unique (NK_PERFIL_DEMOGRAFICO)
 );
 
-insert into dbo.dim_perfil_demografico (nk_perfil_demografico, cd_faixa_etaria, ds_faixa_etaria, cd_escolaridade, ds_escolaridade, cd_genero, ds_genero)
-values ('-1_-1_-1', -1, 'não informado', -1, 'não informado', -1, 'não informado');
+insert into dbo.Dim_Perfil_Demografico (NK_PERFIL_DEMOGRAFICO, CD_FAIXA_ETARIA, DS_FAIXA_ETARIA, CD_ESCOLARIDADE, DS_ESCOLARIDADE, CD_GENERO, DS_GENERO)
+values ('-1_-1_-1', -1, 'NÃO INFORMADO', -1, 'NÃO INFORMADO', -1, 'NÃO INFORMADO');
 
-insert into dbo.dim_perfil_demografico (nk_perfil_demografico, cd_faixa_etaria, ds_faixa_etaria, cd_escolaridade, ds_escolaridade, cd_genero, ds_genero)
+insert into dbo.Dim_Perfil_Demografico (NK_PERFIL_DEMOGRAFICO, CD_FAIXA_ETARIA, DS_FAIXA_ETARIA, CD_ESCOLARIDADE, DS_ESCOLARIDADE, CD_GENERO, DS_GENERO)
 select distinct
-    concat(coalesce(cd_faixa_etaria, -1), '_', coalesce(cd_grau_escolaridade, -1), '_', coalesce(cd_genero, -1)) as nk_perfil_demografico,
-    coalesce(cd_faixa_etaria, -1) as cd_faixa_etaria,
-    coalesce(lower(ds_faixa_etaria), 'não informado') as ds_faixa_etaria,
-    coalesce(cd_grau_escolaridade, -1) as cd_escolaridade,
-    coalesce(lower(ds_grau_escolaridade), 'não informado') as ds_escolaridade,
-    coalesce(cd_genero, -1) as cd_genero,
-    coalesce(lower(ds_genero), 'não informado') as ds_genero
-from staging_perfil_eleitor_secao_2022;
+    concat(coalesce(CD_FAIXA_ETARIA, -1), '_', coalesce(CD_GRAU_ESCOLARIDADE, -1), '_', coalesce(CD_GENERO, -1)) as NK_PERFIL_DEMOGRAFICO,
+    coalesce(CD_FAIXA_ETARIA, -1) as CD_FAIXA_ETARIA,
+    coalesce(upper(DS_FAIXA_ETARIA), 'NÃO INFORMADO') as DS_FAIXA_ETARIA,
+    coalesce(CD_GRAU_ESCOLARIDADE, -1) as CD_ESCOLARIDADE,
+    coalesce(upper(DS_GRAU_ESCOLARIDADE), 'NÃO INFORMADO') as DS_ESCOLARIDADE,
+    coalesce(CD_GENERO, -1) as CD_GENERO,
+    coalesce(upper(DS_GENERO), 'NÃO INFORMADO') as DS_GENERO
+from dbo.Staging_Perfil_Eleitor_Secao_2022;

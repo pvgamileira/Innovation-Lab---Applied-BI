@@ -1,77 +1,39 @@
-﻿-- 04_fato_votacao.sql
--- fato: um registro por secao / candidato (ou tipo de voto) por eleicao
--- empilha 2018 + 2022 com union all e resgata as sks das 3 dimensoes
--- lookup do candidato: sq_candidato (12 digitos) -> legenda/branco/nulo pelo nr_votavel (2 digitos) -> fallback '-1'
+﻿if object_id('dbo.Fato_Votacao', 'u') is not null drop table dbo.Fato_Votacao;
 
-use innovationlab_appliedbi;
-go
-
-if object_id('dbo.fato_votacao', 'u') is not null
-    drop table dbo.fato_votacao;
-go
-
-create table dbo.fato_votacao (
-    sk_votacao int identity(1,1) not null,
-    sk_eleicao int not null,
-    sk_local_votacao int not null,
-    sk_candidato_partido int not null,
-    nr_secao varchar(10) not null,
-    qt_votos int not null,
-    constraint pk_fato_votacao primary key (sk_votacao),
-    constraint fk_fato_votacao_eleicao foreign key (sk_eleicao)
-        references dbo.dim_eleicao (sk_eleicao),
-    constraint fk_fato_votacao_local_votacao foreign key (sk_local_votacao)
-        references dbo.dim_local_votacao (sk_local_votacao),
-    constraint fk_fato_votacao_candidato_partido foreign key (sk_candidato_partido)
-        references dbo.dim_candidato_partido (sk_candidato_partido),
-    constraint ck_fato_votacao_qt_votos check (qt_votos >= 0)
+create table dbo.Fato_Votacao (
+    SK_VOTACAO int identity(1,1) not null,
+    SK_ELEICAO int not null,
+    SK_LOCAL_VOTACAO int not null,
+    SK_CANDIDATO_PARTIDO int not null,
+    NR_SECAO varchar(10) not null,
+    QT_VOTOS int not null,
+    constraint PK_Fato_Votacao primary key (SK_VOTACAO),
+    constraint FK_Fato_Votacao_Eleicao foreign key (SK_ELEICAO) references dbo.Dim_Eleicao (SK_ELEICAO),
+    constraint FK_Fato_Votacao_LocalVotacao foreign key (SK_LOCAL_VOTACAO) references dbo.Dim_Local_Votacao (SK_LOCAL_VOTACAO),
+    constraint FK_Fato_Votacao_CandidatoPartido foreign key (SK_CANDIDATO_PARTIDO) references dbo.Dim_Candidato_Partido (SK_CANDIDATO_PARTIDO),
+    constraint CK_Fato_Votacao_QT_Votos check (QT_VOTOS >= 0)
 );
-go
 
-with votos_empilhados as (
-    select
-        cast(ano_eleicao as smallint) as nr_ano,
-        cast(nr_turno as tinyint) as nr_turno,
-        cd_municipio, nr_zona, nr_local_votacao, nr_secao,
-        nr_votavel, sq_candidato, qt_votos
-    from dbo.staging_votacaosecao_2018_sp
-    union all
-    select
-        cast(ano_eleicao as smallint) as nr_ano,
-        cast(nr_turno as tinyint) as nr_turno,
-        cd_municipio, nr_zona, nr_local_votacao, nr_secao,
-        nr_votavel, sq_candidato, qt_votos
-    from dbo.staging_votacaosecao_2022_sp
-),
-chave_candidato as (
-    select sk_candidato_partido as sk_nao_identificado
-    from dbo.dim_candidato_partido
-    where nk_candidato = '-1'
-)
-insert into dbo.fato_votacao (
-    sk_eleicao,
-    sk_local_votacao,
-    sk_candidato_partido,
-    nr_secao,
-    qt_votos
-)
-select
-    de.sk_eleicao,
-    dlv.sk_local_votacao,
-    coalesce(dcp.sk_candidato_partido, ck.sk_nao_identificado) as sk_candidato_partido,
-    left(v.nr_secao, 10),
-    v.qt_votos
-from votos_empilhados v
-inner join dbo.dim_eleicao de
-    on de.nr_ano = v.nr_ano
-   and de.nr_turno = v.nr_turno
-inner join dbo.dim_local_votacao dlv
-    on dlv.nk_local_votacao = concat_ws('_', v.cd_municipio, v.nr_zona, v.nr_local_votacao)
-left join dbo.dim_candidato_partido dcp
-    on dcp.nk_candidato = case
-        when len(v.sq_candidato) = 12 then v.sq_candidato
-        when len(v.nr_votavel) = 2 then v.nr_votavel
-        else '-1'
-    end
-cross join chave_candidato ck;
-go
+insert into dbo.Fato_Votacao (SK_ELEICAO, SK_LOCAL_VOTACAO, SK_CANDIDATO_PARTIDO, NR_SECAO, QT_VOTOS)
+select 
+    20221002 as SK_ELEICAO,
+    dlv.SK_LOCAL_VOTACAO,
+    coalesce(dcp.SK_CANDIDATO_PARTIDO, dleg.SK_CANDIDATO_PARTIDO, case when v.NR_VOTAVEL = '95' then (select SK_CANDIDATO_PARTIDO from dbo.Dim_Candidato_Partido where NK_CANDIDATO = '95') when v.NR_VOTAVEL = '96' then (select SK_CANDIDATO_PARTIDO from dbo.Dim_Candidato_Partido where NK_CANDIDATO = '96') else (select SK_CANDIDATO_PARTIDO from dbo.Dim_Candidato_Partido where NK_CANDIDATO = '-1') end) as SK_CANDIDATO_PARTIDO,
+    v.NR_SECAO,
+    v.QT_VOTOS
+from dbo.Staging_VotacaoSecao_2022_SP v
+inner join dbo.Dim_Local_Votacao dlv on concat_ws('_', v.CD_MUNICIPIO, v.NR_ZONA, v.NR_LOCAL_VOTACAO) = dlv.NK_LOCAL_VOTACAO
+left join dbo.Dim_Candidato_Partido dcp on cast(v.SQ_CANDIDATO as varchar(20)) = dcp.NK_CANDIDATO
+left join dbo.Dim_Candidato_Partido dleg on len(v.NR_VOTAVEL) = 2 and left(v.NR_VOTAVEL, 2) = dleg.NK_CANDIDATO;
+
+insert into dbo.Fato_Votacao (SK_ELEICAO, SK_LOCAL_VOTACAO, SK_CANDIDATO_PARTIDO, NR_SECAO, QT_VOTOS)
+select 
+    20181007 as SK_ELEICAO,
+    dlv.SK_LOCAL_VOTACAO,
+    coalesce(dcp.SK_CANDIDATO_PARTIDO, dleg.SK_CANDIDATO_PARTIDO, case when v.NR_VOTAVEL = '95' then (select SK_CANDIDATO_PARTIDO from dbo.Dim_Candidato_Partido where NK_CANDIDATO = '95') when v.NR_VOTAVEL = '96' then (select SK_CANDIDATO_PARTIDO from dbo.Dim_Candidato_Partido where NK_CANDIDATO = '96') else (select SK_CANDIDATO_PARTIDO from dbo.Dim_Candidato_Partido where NK_CANDIDATO = '-1') end) as SK_CANDIDATO_PARTIDO,
+    v.NR_SECAO,
+    v.QT_VOTOS
+from dbo.Staging_VotacaoSecao_2018_SP v
+inner join dbo.Dim_Local_Votacao dlv on concat_ws('_', v.CD_MUNICIPIO, v.NR_ZONA, v.NR_LOCAL_VOTACAO) = dlv.NK_LOCAL_VOTACAO
+left join dbo.Dim_Candidato_Partido dcp on cast(v.SQ_CANDIDATO as varchar(20)) = dcp.NK_CANDIDATO
+left join dbo.Dim_Candidato_Partido dleg on len(v.NR_VOTAVEL) = 2 and left(v.NR_VOTAVEL, 2) = dleg.NK_CANDIDATO;
