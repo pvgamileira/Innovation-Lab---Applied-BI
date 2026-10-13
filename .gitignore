@@ -370,3 +370,10 @@ CSV - TSE/detalhe_votacao_secao_2022_SP.csv
 CSV - TSE/*.csv
 Arquivos do projeto/Agent/instancia.env
 Arquivos do projeto/Anota*/*
+
+# Arquivos pesados / backups
+CSV - TSE/*.zip
+CSV - TSE/*.rar
+CSV - TSE/*.pdf
+*.bak
+logs_carga/

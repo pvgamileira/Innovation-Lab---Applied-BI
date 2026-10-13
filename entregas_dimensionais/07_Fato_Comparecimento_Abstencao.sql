@@ -1,4 +1,4 @@
-﻿if object_id('dbo.Fato_Comparecimento_Abstencao', 'u') is not null drop table dbo.Fato_Comparecimento_Abstencao;
+if object_id('dbo.Fato_Comparecimento_Abstencao', 'u') is not null drop table dbo.Fato_Comparecimento_Abstencao;
 
 create table dbo.Fato_Comparecimento_Abstencao (
     SK_COMPARECIMENTO_ABSTENCAO int identity(1,1) not null,
@@ -21,9 +21,10 @@ select
     20221002 as SK_ELEICAO,
     dlv.SK_LOCAL_VOTACAO,
     d.NR_SECAO,
-    sum(d.QT_APTOS) as QT_APTOS,
-    sum(d.QT_COMPARECIMENTO) as QT_COMPARECIMENTO,
-    sum(d.QT_ABSTENCOES) as QT_ABSTENCAO
+    sum(cast(d.QT_APTOS as int)) as QT_APTOS,
+    sum(cast(d.QT_COMPARECIMENTO as int)) as QT_COMPARECIMENTO,
+    sum(cast(d.QT_ABSTENCOES as int)) as QT_ABSTENCAO
 from dbo.Staging_DetalheVotacaoSecao_2022_SP d
 inner join dbo.Dim_Local_Votacao dlv on concat_ws('_', d.CD_MUNICIPIO, d.NR_ZONA, d.NR_LOCAL_VOTACAO) = dlv.NK_LOCAL_VOTACAO
+where d.CD_CARGO = '7'
 group by dlv.SK_LOCAL_VOTACAO, d.NR_SECAO;

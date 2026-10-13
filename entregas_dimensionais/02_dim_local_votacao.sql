@@ -1,4 +1,4 @@
-﻿if object_id('dbo.Dim_Local_Votacao', 'u') is not null drop table dbo.Dim_Local_Votacao;
+if object_id('dbo.Dim_Local_Votacao', 'u') is not null drop table dbo.Dim_Local_Votacao;
 
 create table dbo.Dim_Local_Votacao (
     SK_LOCAL_VOTACAO int identity(1,1) not null,
@@ -15,6 +15,9 @@ create table dbo.Dim_Local_Votacao (
     constraint UQ_Dim_Local_Votacao_NK unique (NK_LOCAL_VOTACAO)
 );
 
+insert into dbo.Dim_Local_Votacao (NK_LOCAL_VOTACAO, CD_MUNICIPIO, NM_MUNICIPIO, NR_ZONA, NR_LOCAL_VOTACAO, NM_LOCAL_VOTACAO, SG_UF, FL_GRANDE_ABC, FL_RMSP)
+values ('-1', -1, 'NÃO INFORMADO', '-1', '-1', 'LOCAL NÃO INFORMADO', 'SP', 0, 0);
+
 with Locais_Unificados as (
     select
         2022 as NR_ANO, CD_MUNICIPIO, upper(NM_MUNICIPIO) as NM_MUNICIPIO, NR_ZONA, NR_LOCAL_VOTACAO, upper(NM_LOCAL_VOTACAO) as NM_LOCAL_VOTACAO, coalesce(SG_UF, 'SP') as SG_UF
@@ -25,11 +28,26 @@ with Locais_Unificados as (
         2018 as NR_ANO, CD_MUNICIPIO, upper(NM_MUNICIPIO) as NM_MUNICIPIO, NR_ZONA, NR_LOCAL_VOTACAO, upper(NM_LOCAL_VOTACAO) as NM_LOCAL_VOTACAO, coalesce(SG_UF, 'SP') as SG_UF
     from dbo.Staging_VotacaoSecao_2018_SP
     group by CD_MUNICIPIO, NM_MUNICIPIO, NR_ZONA, NR_LOCAL_VOTACAO, NM_LOCAL_VOTACAO, SG_UF
+    union
+    select
+        2022 as NR_ANO, CD_MUNICIPIO, upper(NM_MUNICIPIO) as NM_MUNICIPIO, NR_ZONA, NR_LOCAL_VOTACAO, upper(NM_LOCAL_VOTACAO) as NM_LOCAL_VOTACAO, 'SP' as SG_UF
+    from dbo.Staging_Perfil_Eleitor_Secao_2022
+    group by CD_MUNICIPIO, NM_MUNICIPIO, NR_ZONA, NR_LOCAL_VOTACAO, NM_LOCAL_VOTACAO
+    union
+    select
+        2022 as NR_ANO, CD_MUNICIPIO, upper(NM_MUNICIPIO) as NM_MUNICIPIO, NR_ZONA, NR_LOCAL_VOTACAO, upper(NM_LOCAL_VOTACAO) as NM_LOCAL_VOTACAO, 'SP' as SG_UF
+    from dbo.Staging_DetalheVotacaoSecao_2022_SP
+    group by CD_MUNICIPIO, NM_MUNICIPIO, NR_ZONA, NR_LOCAL_VOTACAO, NM_LOCAL_VOTACAO
 ),
 Locais_Agrupados as (
     select 
         concat_ws('_', CD_MUNICIPIO, NR_ZONA, NR_LOCAL_VOTACAO) as NK_LOCAL_VOTACAO,
-        CD_MUNICIPIO, max(NM_MUNICIPIO) as NM_MUNICIPIO, NR_ZONA, NR_LOCAL_VOTACAO, max(coalesce(NM_LOCAL_VOTACAO, 'LOCAL NÃO INFORMADO')) as NM_LOCAL_VOTACAO, max(SG_UF) as SG_UF
+        CD_MUNICIPIO, 
+        max(NM_MUNICIPIO) as NM_MUNICIPIO, 
+        NR_ZONA, 
+        NR_LOCAL_VOTACAO, 
+        max(coalesce(NM_LOCAL_VOTACAO, 'LOCAL NÃO INFORMADO')) as NM_LOCAL_VOTACAO, 
+        max(SG_UF) as SG_UF
     from Locais_Unificados
     group by CD_MUNICIPIO, NR_ZONA, NR_LOCAL_VOTACAO
 )

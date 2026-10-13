@@ -1,4 +1,4 @@
-﻿if object_id('dbo.Fato_Votacao', 'u') is not null drop table dbo.Fato_Votacao;
+if object_id('dbo.Fato_Votacao', 'u') is not null drop table dbo.Fato_Votacao;
 
 create table dbo.Fato_Votacao (
     SK_VOTACAO int identity(1,1) not null,
@@ -14,26 +14,44 @@ create table dbo.Fato_Votacao (
     constraint CK_Fato_Votacao_QT_Votos check (QT_VOTOS >= 0)
 );
 
+-- Variaveis de controle para performance
+declare @sk_nao_id int, @sk_branco int, @sk_nulo int;
+select @sk_nao_id = SK_CANDIDATO_PARTIDO from dbo.Dim_Candidato_Partido where NK_CANDIDATO = '-1';
+select @sk_branco = SK_CANDIDATO_PARTIDO from dbo.Dim_Candidato_Partido where NK_CANDIDATO = '95';
+select @sk_nulo   = SK_CANDIDATO_PARTIDO from dbo.Dim_Candidato_Partido where NK_CANDIDATO = '96';
+
+-- 1. Carga dos Votos de 2022 (1º Turno)
 insert into dbo.Fato_Votacao (SK_ELEICAO, SK_LOCAL_VOTACAO, SK_CANDIDATO_PARTIDO, NR_SECAO, QT_VOTOS)
 select 
     20221002 as SK_ELEICAO,
     dlv.SK_LOCAL_VOTACAO,
-    coalesce(dcp.SK_CANDIDATO_PARTIDO, dleg.SK_CANDIDATO_PARTIDO, case when v.NR_VOTAVEL = '95' then (select SK_CANDIDATO_PARTIDO from dbo.Dim_Candidato_Partido where NK_CANDIDATO = '95') when v.NR_VOTAVEL = '96' then (select SK_CANDIDATO_PARTIDO from dbo.Dim_Candidato_Partido where NK_CANDIDATO = '96') else (select SK_CANDIDATO_PARTIDO from dbo.Dim_Candidato_Partido where NK_CANDIDATO = '-1') end) as SK_CANDIDATO_PARTIDO,
+    case 
+        when v.NR_VOTAVEL = '95' then @sk_branco
+        when v.NR_VOTAVEL = '96' then @sk_nulo
+        when len(v.NR_VOTAVEL) = 2 then coalesce(dleg.SK_CANDIDATO_PARTIDO, @sk_nao_id)
+        else coalesce(dcp.SK_CANDIDATO_PARTIDO, @sk_nao_id)
+    end as SK_CANDIDATO_PARTIDO,
     v.NR_SECAO,
     v.QT_VOTOS
 from dbo.Staging_VotacaoSecao_2022_SP v
 inner join dbo.Dim_Local_Votacao dlv on concat_ws('_', v.CD_MUNICIPIO, v.NR_ZONA, v.NR_LOCAL_VOTACAO) = dlv.NK_LOCAL_VOTACAO
 left join dbo.Dim_Candidato_Partido dcp on cast(v.SQ_CANDIDATO as varchar(20)) = dcp.NK_CANDIDATO
-left join dbo.Dim_Candidato_Partido dleg on len(v.NR_VOTAVEL) = 2 and left(v.NR_VOTAVEL, 2) = dleg.NK_CANDIDATO;
+left join dbo.Dim_Candidato_Partido dleg on len(v.NR_VOTAVEL) = 2 and v.NR_VOTAVEL = dleg.NK_CANDIDATO;
 
+-- 2. Carga dos Votos de 2018 (1º Turno)
 insert into dbo.Fato_Votacao (SK_ELEICAO, SK_LOCAL_VOTACAO, SK_CANDIDATO_PARTIDO, NR_SECAO, QT_VOTOS)
 select 
     20181007 as SK_ELEICAO,
     dlv.SK_LOCAL_VOTACAO,
-    coalesce(dcp.SK_CANDIDATO_PARTIDO, dleg.SK_CANDIDATO_PARTIDO, case when v.NR_VOTAVEL = '95' then (select SK_CANDIDATO_PARTIDO from dbo.Dim_Candidato_Partido where NK_CANDIDATO = '95') when v.NR_VOTAVEL = '96' then (select SK_CANDIDATO_PARTIDO from dbo.Dim_Candidato_Partido where NK_CANDIDATO = '96') else (select SK_CANDIDATO_PARTIDO from dbo.Dim_Candidato_Partido where NK_CANDIDATO = '-1') end) as SK_CANDIDATO_PARTIDO,
+    case 
+        when v.NR_VOTAVEL = '95' then @sk_branco
+        when v.NR_VOTAVEL = '96' then @sk_nulo
+        when len(v.NR_VOTAVEL) = 2 then coalesce(dleg.SK_CANDIDATO_PARTIDO, @sk_nao_id)
+        else coalesce(dcp.SK_CANDIDATO_PARTIDO, @sk_nao_id)
+    end as SK_CANDIDATO_PARTIDO,
     v.NR_SECAO,
     v.QT_VOTOS
 from dbo.Staging_VotacaoSecao_2018_SP v
 inner join dbo.Dim_Local_Votacao dlv on concat_ws('_', v.CD_MUNICIPIO, v.NR_ZONA, v.NR_LOCAL_VOTACAO) = dlv.NK_LOCAL_VOTACAO
 left join dbo.Dim_Candidato_Partido dcp on cast(v.SQ_CANDIDATO as varchar(20)) = dcp.NK_CANDIDATO
-left join dbo.Dim_Candidato_Partido dleg on len(v.NR_VOTAVEL) = 2 and left(v.NR_VOTAVEL, 2) = dleg.NK_CANDIDATO;
+left join dbo.Dim_Candidato_Partido dleg on len(v.NR_VOTAVEL) = 2 and v.NR_VOTAVEL = dleg.NK_CANDIDATO;

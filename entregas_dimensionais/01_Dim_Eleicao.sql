@@ -1,4 +1,4 @@
-﻿if object_id('dbo.Dim_Eleicao', 'u') is not null drop table dbo.Dim_Eleicao;
+if object_id('dbo.Dim_Eleicao', 'u') is not null drop table dbo.Dim_Eleicao;
 
 create table dbo.Dim_Eleicao (
     SK_ELEICAO int not null,

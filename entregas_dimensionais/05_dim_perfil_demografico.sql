@@ -1,4 +1,4 @@
-﻿if object_id('dbo.Dim_Perfil_Demografico', 'u') is not null drop table dbo.Dim_Perfil_Demografico;
+if object_id('dbo.Dim_Perfil_Demografico', 'u') is not null drop table dbo.Dim_Perfil_Demografico;
 
 create table dbo.Dim_Perfil_Demografico (
     SK_PERFIL_DEMOGRAFICO int identity(1,1) not null,
