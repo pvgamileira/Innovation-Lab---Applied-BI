@@ -1,0 +1,86 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v15donut4regiao00015",
+  "position": {
+    "x": 972,
+    "y": 562,
+    "z": 15,
+    "height": 220,
+    "width": 449,
+    "tabOrder": 15
+  },
+  "visual": {
+    "visualType": "donutChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Local_Votacao"
+                    }
+                  },
+                  "Property": "Regiao_Estrategica"
+                }
+              },
+              "queryRef": "Dim_Local_Votacao.Regiao_Estrategica",
+              "nativeQueryRef": "Regiao_Estrategica",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fato_Votacao"
+                    }
+                  },
+                  "Property": "Votos Alienados 2022"
+                }
+              },
+              "queryRef": "Fato_Votacao.Votos Alienados 2022",
+              "nativeQueryRef": "Votos Alienados 2022"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8.5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

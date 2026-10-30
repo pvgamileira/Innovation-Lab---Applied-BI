@@ -1,0 +1,95 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v11donut2urna2200011",
+  "position": {
+    "x": 656,
+    "y": 268,
+    "z": 11,
+    "height": 242,
+    "width": 608,
+    "tabOrder": 11
+  },
+  "visual": {
+    "visualType": "donutChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fato_Votacao"
+                    }
+                  },
+                  "Property": "Votos Validos 2022"
+                }
+              },
+              "queryRef": "Fato_Votacao.Votos Validos 2022",
+              "nativeQueryRef": "Votos Validos 2022"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fato_Votacao"
+                    }
+                  },
+                  "Property": "Votos Nulos 2022 (96)"
+                }
+              },
+              "queryRef": "Fato_Votacao.Votos Nulos 2022 (96)",
+              "nativeQueryRef": "Votos Nulos 2022 (96)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fato_Votacao"
+                    }
+                  },
+                  "Property": "Votos em Branco 2022 (95)"
+                }
+              },
+              "queryRef": "Fato_Votacao.Votos em Branco 2022 (95)",
+              "nativeQueryRef": "Votos em Branco 2022 (95)"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

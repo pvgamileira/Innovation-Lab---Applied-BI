@@ -1,0 +1,116 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "v10donut1faixas00010",
+  "position": {
+    "x": 22,
+    "y": 268,
+    "z": 10,
+    "height": 242,
+    "width": 608,
+    "tabOrder": 10
+  },
+  "visual": {
+    "visualType": "donutChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fato_Votacao"
+                    }
+                  },
+                  "Property": "Locais Queda Moderada (-5 a 0 p.p.)"
+                }
+              },
+              "queryRef": "Fato_Votacao.Locais Queda Moderada (-5 a 0 p.p.)",
+              "nativeQueryRef": "Locais Queda Moderada (-5 a 0 p.p.)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fato_Votacao"
+                    }
+                  },
+                  "Property": "Locais Forte Queda (< -5 p.p.)"
+                }
+              },
+              "queryRef": "Fato_Votacao.Locais Forte Queda (< -5 p.p.)",
+              "nativeQueryRef": "Locais Forte Queda (< -5 p.p.)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fato_Votacao"
+                    }
+                  },
+                  "Property": "Locais Aumento Moderado (0 a +3 p.p.)"
+                }
+              },
+              "queryRef": "Fato_Votacao.Locais Aumento Moderado (0 a +3 p.p.)",
+              "nativeQueryRef": "Locais Aumento Moderado (0 a +3 p.p.)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fato_Votacao"
+                    }
+                  },
+                  "Property": "KPI 09 - Qtd Locais Gatilho > 3 p.p."
+                }
+              },
+              "queryRef": "Fato_Votacao.KPI 09 - Qtd Locais Gatilho > 3 p.p.",
+              "nativeQueryRef": "KPI 09 - Qtd Locais Gatilho > 3 p.p."
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

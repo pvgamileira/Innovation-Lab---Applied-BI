@@ -371,9 +371,10 @@ CSV - TSE/*.csv
 Arquivos do projeto/Agent/instancia.env
 Arquivos do projeto/Anota*/*
 
-# Arquivos pesados / backups
+# Arquivos pesados / backups (acima de 100 MB do GitHub; metadados PBIR/BIM versionados em PBIR_KPI09_Metadata/)
 CSV - TSE/*.zip
 CSV - TSE/*.rar
 CSV - TSE/*.pdf
 *.bak
+*.pbix
 logs_carga/

@@ -1,0 +1,2573 @@
+﻿{
+  "name": "480e9239-a340-4a60-9db6-6ebde5e156a4",
+  "compatibilityLevel": 1606,
+  "createdTimestamp": "2026-10-24T17:33:38.07-03:00",
+  "lastUpdate": "2026-10-30T16:03:51.543333-03:00",
+  "lastSchemaUpdate": "2026-10-24T17:33:38.07-03:00",
+  "lastProcessed": "2026-10-24T18:52:52.01-03:00",
+  "model": {
+    "culture": "pt-BR",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "pt-BR",
+    "valueFilterBehavior": "independent",
+    "modifiedTime": "2026-10-24T20:33:38.846667",
+    "structureModifiedTime": "2026-10-24T21:53:05.04",
+    "tables": [
+      {
+        "name": "Dim_Candidato_Partido",
+        "lineageTag": "17622513-2849-43e3-a7d9-0a7505cda4ff",
+        "modifiedTime": "2026-10-24T21:13:22.636667",
+        "structureModifiedTime": "2026-10-24T21:13:22.636667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-10-24T21:13:22.676667",
+            "structureModifiedTime": "2026-10-24T21:13:22.646667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.083333",
+              "refreshedTime": "2026-10-24T21:52:54.083333"
+            }
+          },
+          {
+            "name": "SK_CANDIDATO_PARTIDO",
+            "dataType": "int64",
+            "sourceColumn": "SK_CANDIDATO_PARTIDO",
+            "formatString": "0",
+            "lineageTag": "41606e1e-cc36-451f-b332-4355819dd0d0",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:53:05.043333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.096667",
+              "refreshedTime": "2026-10-24T21:52:54.096667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "NK_CANDIDATO",
+            "dataType": "string",
+            "sourceColumn": "NK_CANDIDATO",
+            "lineageTag": "89ca638c-abeb-4a90-94c5-93008e6e09cc",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.15",
+              "refreshedTime": "2026-10-24T21:52:54.15"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "NR_CANDIDATO",
+            "dataType": "string",
+            "sourceColumn": "NR_CANDIDATO",
+            "lineageTag": "63426a98-ec03-4898-9488-5e896d39ee3c",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.113333",
+              "refreshedTime": "2026-10-24T21:52:54.113333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "NM_URNA_CANDIDATO",
+            "dataType": "string",
+            "sourceColumn": "NM_URNA_CANDIDATO",
+            "lineageTag": "102a998f-4ea0-4f9e-b50e-2b8381960dec",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.146667",
+              "refreshedTime": "2026-10-24T21:52:54.146667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "DS_CARGO",
+            "dataType": "string",
+            "sourceColumn": "DS_CARGO",
+            "lineageTag": "15886203-75fc-43c4-b34d-d1e3ae3ef082",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.086667",
+              "refreshedTime": "2026-10-24T21:52:54.086667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "SG_PARTIDO",
+            "dataType": "string",
+            "sourceColumn": "SG_PARTIDO",
+            "lineageTag": "3c7d9d00-3130-4f44-8afe-e375443af795",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.086667",
+              "refreshedTime": "2026-10-24T21:52:54.086667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "SG_FEDERACAO",
+            "dataType": "string",
+            "sourceColumn": "SG_FEDERACAO",
+            "lineageTag": "f7e4b1de-fde6-427d-b178-e2405d04a862",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.083333",
+              "refreshedTime": "2026-10-24T21:52:54.083333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "FL_CONCORRENTE_REGIONAL",
+            "dataType": "boolean",
+            "sourceColumn": "FL_CONCORRENTE_REGIONAL",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "4ac796b0-4f2b-4968-a4e2-a648016547e1",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.086667",
+              "refreshedTime": "2026-10-24T21:52:54.086667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Candidato_Partido",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-10-24T21:13:34.893333",
+            "refreshedTime": "2026-10-24T21:13:34.893333",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Fonte = Sql.Databases(\"25.35.69.146\"),\n    InnovationLab_AppliedBI = Fonte{[Name=\"InnovationLab_AppliedBI\"]}[Data],\n    dbo_Dim_Candidato_Partido = InnovationLab_AppliedBI{[Schema=\"dbo\",Item=\"Dim_Candidato_Partido\"]}[Data],\n    #\"Colunas Removidas\" = Table.RemoveColumns(dbo_Dim_Candidato_Partido,{\"Fato_Votacao\"})\nin\n    #\"Colunas Removidas\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação",
+            "modifiedTime": "2026-10-24T21:13:22.666667"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2026-10-24T21:13:22.666667"
+          }
+        ]
+      },
+      {
+        "name": "Fato_Votacao",
+        "lineageTag": "6abb042e-b377-46e8-8b3f-44cf9d3db9f7",
+        "modifiedTime": "2026-10-24T21:13:22.65",
+        "structureModifiedTime": "2026-10-30T18:55:48.39",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-10-24T21:13:22.676667",
+            "structureModifiedTime": "2026-10-24T21:13:22.65",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.113333",
+              "refreshedTime": "2026-10-24T21:52:54.113333"
+            }
+          },
+          {
+            "name": "SK_VOTACAO",
+            "dataType": "int64",
+            "sourceColumn": "SK_VOTACAO",
+            "formatString": "0",
+            "lineageTag": "fcca747c-688d-49d1-b83b-04b447bf4d62",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:53:04.253333",
+              "refreshedTime": "2026-10-24T21:53:04.253333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "SK_ELEICAO",
+            "dataType": "int64",
+            "sourceColumn": "SK_ELEICAO",
+            "formatString": "0",
+            "lineageTag": "70aff3c9-a563-4491-b975-f845c4b4e565",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:53:05.043333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.116667",
+              "refreshedTime": "2026-10-24T21:52:54.116667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "SK_LOCAL_VOTACAO",
+            "dataType": "int64",
+            "sourceColumn": "SK_LOCAL_VOTACAO",
+            "formatString": "0",
+            "lineageTag": "91f2a4bf-f1d6-4af4-976b-da6a20def320",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:53:05.043333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.106667",
+              "refreshedTime": "2026-10-24T21:52:54.106667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "SK_CANDIDATO_PARTIDO",
+            "dataType": "int64",
+            "sourceColumn": "SK_CANDIDATO_PARTIDO",
+            "formatString": "0",
+            "lineageTag": "4980e6a8-2ece-47f6-8486-83f3340bd015",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:53:05.043333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.096667",
+              "refreshedTime": "2026-10-24T21:52:54.096667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "NR_SECAO",
+            "dataType": "string",
+            "sourceColumn": "NR_SECAO",
+            "lineageTag": "eab13d02-6f77-46a6-9b97-4bdf88ada458",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.11",
+              "refreshedTime": "2026-10-24T21:52:54.11"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "QT_VOTOS",
+            "dataType": "int64",
+            "sourceColumn": "QT_VOTOS",
+            "formatString": "0",
+            "lineageTag": "6d196543-4d74-49e6-8115-1c1a545a4508",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.106667",
+              "refreshedTime": "2026-10-24T21:52:54.106667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fato_Votacao",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-10-24T21:31:10.786667",
+            "refreshedTime": "2026-10-24T21:31:10.786667",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Fonte = Sql.Databases(\"25.35.69.146\"),\n    InnovationLab_AppliedBI = Fonte{[Name=\"InnovationLab_AppliedBI\"]}[Data],\n    dbo_Fato_Votacao = InnovationLab_AppliedBI{[Schema=\"dbo\",Item=\"Fato_Votacao\"]}[Data],\n    #\"Colunas Removidas\" = Table.RemoveColumns(dbo_Fato_Votacao,{\"Dim_Candidato_Partido\", \"Dim_Eleicao\", \"Dim_Local_Votacao\"})\nin\n    #\"Colunas Removidas\""
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Votos Alienados (Brancos e Nulos)",
+            "expression": "CALCULATE(SUM(Fato_Votacao[QT_VOTOS]), REMOVEFILTERS(Dim_Candidato_Partido), Dim_Candidato_Partido[NK_CANDIDATO] IN {\"95\", \"96\"})",
+            "formatString": "#,##0",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "a2087b5b-929d-464a-8e9c-6c1111325491",
+            "dataType": "int64",
+            "modifiedTime": "2026-10-26T18:44:25.78",
+            "structureModifiedTime": "2026-10-26T18:33:45.75"
+          },
+          {
+            "name": "Votos em Branco (95)",
+            "expression": "CALCULATE(SUM(Fato_Votacao[QT_VOTOS]), REMOVEFILTERS(Dim_Candidato_Partido), Dim_Candidato_Partido[NK_CANDIDATO] = \"95\")",
+            "formatString": "#,##0",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "8c74c322-52ff-4230-a2bb-1ee2257e175f",
+            "dataType": "int64",
+            "modifiedTime": "2026-10-26T18:44:25.78",
+            "structureModifiedTime": "2026-10-26T18:33:45.753333"
+          },
+          {
+            "name": "Votos Nulos (96)",
+            "expression": "CALCULATE(SUM(Fato_Votacao[QT_VOTOS]), REMOVEFILTERS(Dim_Candidato_Partido), Dim_Candidato_Partido[NK_CANDIDATO] = \"96\")",
+            "formatString": "#,##0",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "dbe26673-7201-4dd2-bf13-76df65ed761f",
+            "dataType": "int64",
+            "modifiedTime": "2026-10-26T18:44:25.78",
+            "structureModifiedTime": "2026-10-26T18:33:45.753333"
+          },
+          {
+            "name": "Votos Totais Cargo Urna",
+            "expression": "CALCULATE(SUM(Fato_Votacao[QT_VOTOS]), REMOVEFILTERS(Dim_Candidato_Partido))",
+            "formatString": "#,##0",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "d819f992-6144-4cc5-9cc3-ce2dd7edc25b",
+            "dataType": "int64",
+            "modifiedTime": "2026-10-26T18:44:25.78",
+            "structureModifiedTime": "2026-10-26T18:33:45.753333"
+          },
+          {
+            "name": "Votos Validos Cargo Urna",
+            "expression": "CALCULATE(SUM(Fato_Votacao[QT_VOTOS]), REMOVEFILTERS(Dim_Candidato_Partido), NOT(Dim_Candidato_Partido[NK_CANDIDATO] IN {\"95\", \"96\", \"-1\"}))",
+            "formatString": "#,##0",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "b7520cc4-58a0-4554-8d3b-424b72e905be",
+            "dataType": "int64",
+            "modifiedTime": "2026-10-26T18:44:25.78",
+            "structureModifiedTime": "2026-10-26T18:33:45.753333"
+          },
+          {
+            "name": "IAR 2018 (%)",
+            "expression": "CALCULATE(DIVIDE([Votos Alienados (Brancos e Nulos)], [Votos Totais Cargo Urna], 0) * 100, Dim_Eleicao[NR_ANO] = 2018)",
+            "formatString": "0.00\"%\"",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "270fc3c9-8d7d-4a8b-ae70-d3c096c7e604",
+            "dataType": "double",
+            "modifiedTime": "2026-10-26T18:44:25.78",
+            "structureModifiedTime": "2026-10-26T18:33:45.753333"
+          },
+          {
+            "name": "IAR 2022 (%)",
+            "expression": "CALCULATE(DIVIDE([Votos Alienados (Brancos e Nulos)], [Votos Totais Cargo Urna], 0) * 100, Dim_Eleicao[NR_ANO] = 2022)",
+            "formatString": "0.00\"%\"",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "fa5c223c-2009-4d25-b2cc-e9b8191ecaca",
+            "dataType": "double",
+            "modifiedTime": "2026-10-26T18:44:25.78",
+            "structureModifiedTime": "2026-10-26T18:33:45.753333"
+          },
+          {
+            "name": "KPI 09 - Delta IAR (p.p.)",
+            "expression": "VAR vTot18 = CALCULATE([Votos Totais Cargo Urna], Dim_Eleicao[NR_ANO] = 2018) VAR vTot22 = CALCULATE([Votos Totais Cargo Urna], Dim_Eleicao[NR_ANO] = 2022) RETURN IF(vTot18 > 0 && vTot22 > 0, [IAR 2022 (%)] - [IAR 2018 (%)], BLANK())",
+            "formatString": "+0.00\" p.p.\";-0.00\" p.p.\";0.00\" p.p.\"",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "f171253b-08cf-4050-913b-15c52ef0a916",
+            "dataType": "double",
+            "modifiedTime": "2026-10-26T19:00:59.373333",
+            "structureModifiedTime": "2026-10-26T18:33:45.753333"
+          },
+          {
+            "name": "KPI 09 - Qtd Locais Gatilho > 3 p.p.",
+            "expression": "COALESCE(COUNTROWS(FILTER(VALUES(Dim_Local_Votacao[SK_LOCAL_VOTACAO]), Dim_Local_Votacao[SK_LOCAL_VOTACAO] > 0 && [KPI 09 - Delta IAR (p.p.)] > 3)), 0)",
+            "formatString": "#,##0\" locais\"",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "064259b3-8830-44e9-a3fc-d3d8660357c6",
+            "dataType": "int64",
+            "modifiedTime": "2026-10-26T19:00:59.373333",
+            "structureModifiedTime": "2026-10-26T18:33:45.753333"
+          },
+          {
+            "name": "KPI 09 - Status Gatilho",
+            "expression": "IF(ISBLANK([KPI 09 - Delta IAR (p.p.)]), BLANK(), IF([KPI 09 - Delta IAR (p.p.)] > 3, \"ALERTA (> +3 p.p.)\", IF([KPI 09 - Delta IAR (p.p.)] > 0, \"ATENCAO (0 a +3)\", \"QUEDA / ESTAVEL\")))",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "d4dcbe36-3bb1-4a8b-bd4c-b36bcc3f3f5c",
+            "dataType": "string",
+            "modifiedTime": "2026-10-26T19:00:59.373333",
+            "structureModifiedTime": "2026-10-26T18:33:45.753333"
+          },
+          {
+            "name": "Total Locais Analisados",
+            "expression": "CALCULATE(DISTINCTCOUNT(Dim_Local_Votacao[SK_LOCAL_VOTACAO]), Dim_Local_Votacao[SK_LOCAL_VOTACAO] > 0)",
+            "formatString": "#,##0",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "09056fa6-a50e-479c-a98d-b127bb6222e7",
+            "dataType": "int64",
+            "modifiedTime": "2026-10-26T18:44:25.78",
+            "structureModifiedTime": "2026-10-26T18:33:45.753333"
+          },
+          {
+            "name": "Votos Validos 2022",
+            "expression": "CALCULATE([Votos Validos Cargo Urna], Dim_Eleicao[NR_ANO] = 2022)",
+            "formatString": "#,##0",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "954ce1c8-1f6b-4efd-8569-a1c4502a6a2e",
+            "dataType": "int64",
+            "modifiedTime": "2026-10-26T19:18:38.806667",
+            "structureModifiedTime": "2026-10-26T19:00:59.366667"
+          },
+          {
+            "name": "Votos Alienados 2022",
+            "expression": "CALCULATE([Votos Alienados (Brancos e Nulos)], Dim_Eleicao[NR_ANO] = 2022)",
+            "formatString": "#,##0",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "f9d4bfbc-4448-4386-b833-9d9ba8856afd",
+            "dataType": "int64",
+            "modifiedTime": "2026-10-26T19:18:38.806667",
+            "structureModifiedTime": "2026-10-26T19:00:59.366667"
+          },
+          {
+            "name": "Votos Alienados 2018",
+            "expression": "CALCULATE([Votos Alienados (Brancos e Nulos)], Dim_Eleicao[NR_ANO] = 2018)",
+            "formatString": "#,##0",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "fde18116-a7a0-44fc-ace9-219b785ba060",
+            "dataType": "int64",
+            "modifiedTime": "2026-10-26T19:18:38.806667",
+            "structureModifiedTime": "2026-10-26T19:00:59.366667"
+          },
+          {
+            "name": "Votos em Branco 2022 (95)",
+            "expression": "CALCULATE([Votos em Branco (95)], Dim_Eleicao[NR_ANO] = 2022)",
+            "formatString": "#,##0",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "8f5535fc-e291-4489-81ec-5c5c2e881ac9",
+            "dataType": "int64",
+            "modifiedTime": "2026-10-26T19:18:38.806667",
+            "structureModifiedTime": "2026-10-26T19:00:59.366667"
+          },
+          {
+            "name": "Votos Nulos 2022 (96)",
+            "expression": "CALCULATE([Votos Nulos (96)], Dim_Eleicao[NR_ANO] = 2022)",
+            "formatString": "#,##0",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "98d00454-6fc7-4eb8-8b52-e031b0a27c31",
+            "dataType": "int64",
+            "modifiedTime": "2026-10-26T19:18:38.806667",
+            "structureModifiedTime": "2026-10-26T19:00:59.366667"
+          },
+          {
+            "name": "IAR Taxa Alienacao (%)",
+            "expression": "DIVIDE([Votos Alienados (Brancos e Nulos)], [Votos Totais Cargo Urna], 0) * 100",
+            "formatString": "0.00\"%\"",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "1db083b7-7115-4f30-8e78-28ee04faf2fe",
+            "dataType": "double",
+            "modifiedTime": "2026-10-26T19:18:38.806667",
+            "structureModifiedTime": "2026-10-26T19:00:59.366667"
+          },
+          {
+            "name": "KPI 09 - Delta IAR Santo Andre",
+            "expression": "CALCULATE([KPI 09 - Delta IAR (p.p.)], CONTAINSSTRING(Dim_Local_Votacao[NM_MUNICIPIO], \"SANTO ANDR\"))",
+            "formatString": "+0.00\" p.p.\";-0.00\" p.p.\";0.00\" p.p.\"",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "0df9c95e-6aa8-438b-8689-45e4c277fe9a",
+            "dataType": "double",
+            "modifiedTime": "2026-10-26T19:27:53.16",
+            "structureModifiedTime": "2026-10-26T19:00:59.366667"
+          },
+          {
+            "name": "Locais Forte Queda (< -5 p.p.)",
+            "expression": "COALESCE(COUNTROWS(FILTER(VALUES(Dim_Local_Votacao[SK_LOCAL_VOTACAO]), Dim_Local_Votacao[SK_LOCAL_VOTACAO] > 0 && NOT(ISBLANK([KPI 09 - Delta IAR (p.p.)])) && [KPI 09 - Delta IAR (p.p.)] <= -5)), 0)",
+            "formatString": "#,##0",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "ed448db4-a9ac-4e32-bce4-47658b064083",
+            "dataType": "int64",
+            "modifiedTime": "2026-10-26T19:18:38.806667",
+            "structureModifiedTime": "2026-10-26T19:00:59.366667"
+          },
+          {
+            "name": "Locais Queda Moderada (-5 a 0 p.p.)",
+            "expression": "COALESCE(COUNTROWS(FILTER(VALUES(Dim_Local_Votacao[SK_LOCAL_VOTACAO]), Dim_Local_Votacao[SK_LOCAL_VOTACAO] > 0 && [KPI 09 - Delta IAR (p.p.)] > -5 && [KPI 09 - Delta IAR (p.p.)] <= 0)), 0)",
+            "formatString": "#,##0",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "9cdc2c1a-9206-4a37-b7a5-d80886b484dd",
+            "dataType": "int64",
+            "modifiedTime": "2026-10-26T19:18:38.806667",
+            "structureModifiedTime": "2026-10-26T19:00:59.366667"
+          },
+          {
+            "name": "Locais Aumento Moderado (0 a +3 p.p.)",
+            "expression": "COALESCE(COUNTROWS(FILTER(VALUES(Dim_Local_Votacao[SK_LOCAL_VOTACAO]), Dim_Local_Votacao[SK_LOCAL_VOTACAO] > 0 && [KPI 09 - Delta IAR (p.p.)] > 0 && [KPI 09 - Delta IAR (p.p.)] <= 3)), 0)",
+            "formatString": "#,##0",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "d91f72cd-3c8c-4576-8494-fdc52b8caa71",
+            "dataType": "int64",
+            "modifiedTime": "2026-10-26T19:18:38.806667",
+            "structureModifiedTime": "2026-10-26T19:00:59.366667"
+          },
+          {
+            "name": "Subtitulo Card 1 (Variacao Votos Alienados)",
+            "expression": "VAR vDiff = [Votos Alienados 2022] - [Votos Alienados 2018] VAR vSinal = IF(vDiff <= 0, UNICHAR(9660) & \" \", UNICHAR(9650) & \" +\") RETURN vSinal & FORMAT(vDiff, \"#,##0\") & \" votos alienados (2022 vs 2018)\"",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "5c8b2695-c919-4d5a-b1ac-fb7210da4927",
+            "dataType": "string",
+            "modifiedTime": "2026-10-30T19:03:51.07",
+            "structureModifiedTime": "2026-10-30T18:55:48.39"
+          },
+          {
+            "name": "Subtitulo Card 4 (Volume 2022)",
+            "expression": "UNICHAR(9660) & \" \" & FORMAT([Votos Alienados 2022], \"#,##0\") & \" Votos Alienados no 1\" & UNICHAR(186) & \" Turno (2022)\"",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "1a76b157-81b0-4425-8ee4-6b3a824eef64",
+            "dataType": "string",
+            "modifiedTime": "2026-10-30T19:03:51.07",
+            "structureModifiedTime": "2026-10-30T18:55:48.39"
+          },
+          {
+            "name": "Subtitulo Card 5 (Volume 2018)",
+            "expression": "UNICHAR(9679) & \" \" & FORMAT([Votos Alienados 2018], \"#,##0\") & \" Votos Alienados no 1\" & UNICHAR(186) & \" Turno (2018)\"",
+            "displayFolder": "KPI 09 - Alienacao Eleitoral",
+            "lineageTag": "73ea2714-f09e-40b5-9a4e-39fca981ff0d",
+            "dataType": "string",
+            "modifiedTime": "2026-10-30T19:03:51.07",
+            "structureModifiedTime": "2026-10-30T18:55:48.39"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação",
+            "modifiedTime": "2026-10-24T21:13:22.666667"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2026-10-24T21:13:22.666667"
+          }
+        ]
+      },
+      {
+        "name": "Dim_Perfil_Demografico",
+        "lineageTag": "78b3ec74-ade7-4372-91d5-1ec9f3d4eb38",
+        "modifiedTime": "2026-10-24T21:13:22.65",
+        "structureModifiedTime": "2026-10-24T21:13:22.65",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-10-24T21:13:22.676667",
+            "structureModifiedTime": "2026-10-24T21:13:22.65",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.093333",
+              "refreshedTime": "2026-10-24T21:52:54.093333"
+            }
+          },
+          {
+            "name": "SK_PERFIL_DEMOGRAFICO",
+            "dataType": "int64",
+            "sourceColumn": "SK_PERFIL_DEMOGRAFICO",
+            "formatString": "0",
+            "lineageTag": "912780ce-564e-406e-ac2f-1660d002aa4f",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:53:05.043333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.096667",
+              "refreshedTime": "2026-10-24T21:52:54.096667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "NK_PERFIL_DEMOGRAFICO",
+            "dataType": "string",
+            "sourceColumn": "NK_PERFIL_DEMOGRAFICO",
+            "lineageTag": "bdcf6727-b01b-42d8-808b-9894197c9d5b",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.096667",
+              "refreshedTime": "2026-10-24T21:52:54.096667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "CD_FAIXA_ETARIA",
+            "dataType": "int64",
+            "sourceColumn": "CD_FAIXA_ETARIA",
+            "formatString": "0",
+            "lineageTag": "4b71d3ed-f627-448e-9d96-eaffc9318e45",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:53:05.043333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.096667",
+              "refreshedTime": "2026-10-24T21:52:54.096667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "DS_FAIXA_ETARIA",
+            "dataType": "string",
+            "sourceColumn": "DS_FAIXA_ETARIA",
+            "lineageTag": "b6220b79-0c24-43e0-8911-32434d417100",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.113333",
+              "refreshedTime": "2026-10-24T21:52:54.113333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "CD_ESCOLARIDADE",
+            "dataType": "int64",
+            "sourceColumn": "CD_ESCOLARIDADE",
+            "formatString": "0",
+            "lineageTag": "b5ce667f-c731-470c-beda-5750033c235e",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:53:05.043333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.113333",
+              "refreshedTime": "2026-10-24T21:52:54.113333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "DS_ESCOLARIDADE",
+            "dataType": "string",
+            "sourceColumn": "DS_ESCOLARIDADE",
+            "lineageTag": "14a05c9f-d2a9-49ac-ac0a-379d94cc25c9",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.11",
+              "refreshedTime": "2026-10-24T21:52:54.11"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "CD_GENERO",
+            "dataType": "int64",
+            "sourceColumn": "CD_GENERO",
+            "formatString": "0",
+            "lineageTag": "19dbee43-10c7-41dc-a072-8555b0e2daac",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:53:05.043333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.11",
+              "refreshedTime": "2026-10-24T21:52:54.11"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "DS_GENERO",
+            "dataType": "string",
+            "sourceColumn": "DS_GENERO",
+            "lineageTag": "240f5f59-6df2-4391-a455-1356e0f6d6ca",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.113333",
+              "refreshedTime": "2026-10-24T21:52:54.113333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Perfil_Demografico",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-10-24T21:13:35.24",
+            "refreshedTime": "2026-10-24T21:13:35.24",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Fonte = Sql.Databases(\"25.35.69.146\"),\n    InnovationLab_AppliedBI = Fonte{[Name=\"InnovationLab_AppliedBI\"]}[Data],\n    dbo_Dim_Perfil_Demografico = InnovationLab_AppliedBI{[Schema=\"dbo\",Item=\"Dim_Perfil_Demografico\"]}[Data],\n    #\"Colunas Removidas\" = Table.RemoveColumns(dbo_Dim_Perfil_Demografico,{\"Fato_Perfil_Eleitorado\"})\nin\n    #\"Colunas Removidas\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação",
+            "modifiedTime": "2026-10-24T21:13:22.666667"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2026-10-24T21:13:22.666667"
+          }
+        ]
+      },
+      {
+        "name": "Dim_Local_Votacao",
+        "lineageTag": "70570f39-a686-49bf-8011-bb0183c6b612",
+        "modifiedTime": "2026-10-24T21:13:22.65",
+        "structureModifiedTime": "2026-10-26T19:00:59.366667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-10-24T21:13:22.676667",
+            "structureModifiedTime": "2026-10-24T21:13:22.65",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.083333",
+              "refreshedTime": "2026-10-24T21:52:54.083333"
+            }
+          },
+          {
+            "name": "SK_LOCAL_VOTACAO",
+            "dataType": "int64",
+            "sourceColumn": "SK_LOCAL_VOTACAO",
+            "formatString": "0",
+            "lineageTag": "07ac8d59-018e-416d-b3b6-9604c19a2b98",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:53:05.043333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.096667",
+              "refreshedTime": "2026-10-24T21:52:54.096667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ]
+          },
+          {
+            "name": "NK_LOCAL_VOTACAO",
+            "dataType": "string",
+            "sourceColumn": "NK_LOCAL_VOTACAO",
+            "lineageTag": "e8b67c81-2b2c-4123-b173-070c24488710",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.206667",
+              "refreshedTime": "2026-10-24T21:52:54.206667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "CD_MUNICIPIO",
+            "dataType": "int64",
+            "sourceColumn": "CD_MUNICIPIO",
+            "formatString": "0",
+            "lineageTag": "7a556c96-5baa-4ae8-97a7-deb82fa8571f",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.093333",
+              "refreshedTime": "2026-10-24T21:52:54.093333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "NM_MUNICIPIO",
+            "dataType": "string",
+            "sourceColumn": "NM_MUNICIPIO",
+            "lineageTag": "78005f48-ddff-40ce-b921-9d52a8668e7f",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.093333",
+              "refreshedTime": "2026-10-24T21:52:54.093333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "NR_ZONA",
+            "dataType": "string",
+            "sourceColumn": "NR_ZONA",
+            "lineageTag": "b35dbbf5-9644-4dc2-98d3-8abb2c5ffd46",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.086667",
+              "refreshedTime": "2026-10-24T21:52:54.086667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "NR_LOCAL_VOTACAO",
+            "dataType": "string",
+            "sourceColumn": "NR_LOCAL_VOTACAO",
+            "lineageTag": "4b230598-8317-4c8b-bd25-d77f7a99a3d1",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.093333",
+              "refreshedTime": "2026-10-24T21:52:54.093333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "NM_LOCAL_VOTACAO",
+            "dataType": "string",
+            "sourceColumn": "NM_LOCAL_VOTACAO",
+            "lineageTag": "d4115539-2104-4be4-bb4b-8beedbc4d5d7",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.266667",
+              "refreshedTime": "2026-10-24T21:52:54.266667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "SG_UF",
+            "dataType": "string",
+            "sourceColumn": "SG_UF",
+            "lineageTag": "e33d2b4e-089e-44f8-a879-8b260f983e6c",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.086667",
+              "refreshedTime": "2026-10-24T21:52:54.086667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "FL_GRANDE_ABC",
+            "dataType": "boolean",
+            "sourceColumn": "FL_GRANDE_ABC",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "56e6fc01-d5d7-4258-a692-007a170aa70c",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.086667",
+              "refreshedTime": "2026-10-24T21:52:54.086667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "FL_RMSP",
+            "dataType": "boolean",
+            "sourceColumn": "FL_RMSP",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "82e0c230-0574-4834-9864-048f6280116a",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.083333",
+              "refreshedTime": "2026-10-24T21:52:54.083333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Regiao_Estrategica",
+            "dataType": "string",
+            "expression": "SWITCH(TRUE(), Dim_Local_Votacao[FL_GRANDE_ABC] = TRUE(), \"Grande ABC\", Dim_Local_Votacao[FL_RMSP] = TRUE(), \"Capital / RMSP\", \"Interior e Litoral\")",
+            "lineageTag": "76bdb86d-d5ca-4a9b-93f9-a645a29571b5",
+            "modifiedTime": "2026-10-26T19:18:39.51",
+            "structureModifiedTime": "2026-10-26T19:00:59.36",
+            "refreshedTime": "2026-10-26T19:18:39.51",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-26T19:18:39.516667",
+              "refreshedTime": "2026-10-26T19:18:39.516667"
+            }
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Local_Votacao",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-10-24T21:13:37.283333",
+            "refreshedTime": "2026-10-24T21:13:37.283333",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Fonte = Sql.Databases(\"25.35.69.146\"),\n    InnovationLab_AppliedBI = Fonte{[Name=\"InnovationLab_AppliedBI\"]}[Data],\n    dbo_Dim_Local_Votacao = InnovationLab_AppliedBI{[Schema=\"dbo\",Item=\"Dim_Local_Votacao\"]}[Data],\n    #\"Colunas Removidas\" = Table.RemoveColumns(dbo_Dim_Local_Votacao,{\"Fato_Comparecimento_Abstencao\", \"Fato_Perfil_Eleitorado\", \"Fato_Votacao\"})\nin\n    #\"Colunas Removidas\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação",
+            "modifiedTime": "2026-10-24T21:13:22.67"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2026-10-24T21:13:22.67"
+          }
+        ]
+      },
+      {
+        "name": "Fato_Comparecimento_Abstencao",
+        "lineageTag": "e22e01a5-c888-4001-abcb-52047fda0977",
+        "modifiedTime": "2026-10-24T21:13:22.65",
+        "structureModifiedTime": "2026-10-24T21:13:22.65",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-10-24T21:13:22.676667",
+            "structureModifiedTime": "2026-10-24T21:13:22.65",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.106667",
+              "refreshedTime": "2026-10-24T21:52:54.106667"
+            }
+          },
+          {
+            "name": "SK_COMPARECIMENTO_ABSTENCAO",
+            "dataType": "int64",
+            "sourceColumn": "SK_COMPARECIMENTO_ABSTENCAO",
+            "formatString": "0",
+            "lineageTag": "523ff5f6-7985-4540-ac6c-409aabb2d215",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.166667",
+              "refreshedTime": "2026-10-24T21:52:54.166667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "SK_ELEICAO",
+            "dataType": "int64",
+            "sourceColumn": "SK_ELEICAO",
+            "formatString": "0",
+            "lineageTag": "a8600406-ad83-48ce-af3a-9e4a8506817d",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:53:05.043333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.11",
+              "refreshedTime": "2026-10-24T21:52:54.11"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "SK_LOCAL_VOTACAO",
+            "dataType": "int64",
+            "sourceColumn": "SK_LOCAL_VOTACAO",
+            "formatString": "0",
+            "lineageTag": "4501c28a-7e96-4266-9770-2d1fac38963e",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:53:05.043333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.13",
+              "refreshedTime": "2026-10-24T21:52:54.13"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "NR_SECAO",
+            "dataType": "string",
+            "sourceColumn": "NR_SECAO",
+            "lineageTag": "795871f1-5a53-4407-b4f1-ba4388fe94e0",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.113333",
+              "refreshedTime": "2026-10-24T21:52:54.113333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "QT_APTOS",
+            "dataType": "int64",
+            "sourceColumn": "QT_APTOS",
+            "formatString": "0",
+            "lineageTag": "da490af5-e619-407b-a07b-3a653a0f2efd",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.113333",
+              "refreshedTime": "2026-10-24T21:52:54.113333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "QT_COMPARECIMENTO",
+            "dataType": "int64",
+            "sourceColumn": "QT_COMPARECIMENTO",
+            "formatString": "0",
+            "lineageTag": "81888aa3-7f3f-4ac3-b573-e59d0f2b962b",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.113333",
+              "refreshedTime": "2026-10-24T21:52:54.113333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "QT_ABSTENCAO",
+            "dataType": "int64",
+            "sourceColumn": "QT_ABSTENCAO",
+            "formatString": "0",
+            "lineageTag": "098da716-2c8d-4628-b429-d07207236bd9",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.113333",
+              "refreshedTime": "2026-10-24T21:52:54.113333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fato_Comparecimento_Abstencao",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-10-24T21:13:41.673333",
+            "refreshedTime": "2026-10-24T21:13:41.673333",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Fonte = Sql.Databases(\"25.35.69.146\"),\n    InnovationLab_AppliedBI = Fonte{[Name=\"InnovationLab_AppliedBI\"]}[Data],\n    dbo_Fato_Comparecimento_Abstencao = InnovationLab_AppliedBI{[Schema=\"dbo\",Item=\"Fato_Comparecimento_Abstencao\"]}[Data],\n    #\"Colunas Removidas\" = Table.RemoveColumns(dbo_Fato_Comparecimento_Abstencao,{\"Dim_Eleicao\", \"Dim_Local_Votacao\"})\nin\n    #\"Colunas Removidas\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação",
+            "modifiedTime": "2026-10-24T21:13:22.67"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2026-10-24T21:13:22.67"
+          }
+        ]
+      },
+      {
+        "name": "Fato_Perfil_Eleitorado",
+        "lineageTag": "afb49c8d-0976-45f4-9adb-77b2c6d0441f",
+        "modifiedTime": "2026-10-24T21:13:22.65",
+        "structureModifiedTime": "2026-10-24T21:13:22.65",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-10-24T21:13:22.676667",
+            "structureModifiedTime": "2026-10-24T21:13:22.65",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.096667",
+              "refreshedTime": "2026-10-24T21:52:54.096667"
+            }
+          },
+          {
+            "name": "SK_PERFIL_ELEITORADO",
+            "dataType": "int64",
+            "sourceColumn": "SK_PERFIL_ELEITORADO",
+            "formatString": "0",
+            "lineageTag": "d90de604-f025-4316-8172-2f32b3bbfbb7",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:53:04.316667",
+              "refreshedTime": "2026-10-24T21:53:04.316667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "SK_ELEICAO",
+            "dataType": "int64",
+            "sourceColumn": "SK_ELEICAO",
+            "formatString": "0",
+            "lineageTag": "109abf73-1dd7-4672-b841-7877c2dfc605",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:53:05.043333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.09",
+              "refreshedTime": "2026-10-24T21:52:54.09"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "SK_LOCAL_VOTACAO",
+            "dataType": "int64",
+            "sourceColumn": "SK_LOCAL_VOTACAO",
+            "formatString": "0",
+            "lineageTag": "6cf71443-075f-4672-b032-de8388276d41",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:53:05.043333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.106667",
+              "refreshedTime": "2026-10-24T21:52:54.106667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "SK_PERFIL_DEMOGRAFICO",
+            "dataType": "int64",
+            "sourceColumn": "SK_PERFIL_DEMOGRAFICO",
+            "formatString": "0",
+            "lineageTag": "998dec3a-1ad1-4c6c-a118-2f42e1a177c2",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:53:05.043333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.093333",
+              "refreshedTime": "2026-10-24T21:52:54.093333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "NR_SECAO",
+            "dataType": "string",
+            "sourceColumn": "NR_SECAO",
+            "lineageTag": "d3bb57b7-f652-4601-b229-b14e4965195f",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.096667",
+              "refreshedTime": "2026-10-24T21:52:54.096667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "QT_ELEITORES_PERFIL",
+            "dataType": "int64",
+            "sourceColumn": "QT_ELEITORES_PERFIL",
+            "formatString": "0",
+            "lineageTag": "26297cf8-22cf-4102-8b67-9bfbf28bbe70",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.093333",
+              "refreshedTime": "2026-10-24T21:52:54.093333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fato_Perfil_Eleitorado",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-10-24T21:52:52.01",
+            "refreshedTime": "2026-10-24T21:52:52.01",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Fonte = Sql.Databases(\"25.35.69.146\"),\n    InnovationLab_AppliedBI = Fonte{[Name=\"InnovationLab_AppliedBI\"]}[Data],\n    dbo_Fato_Perfil_Eleitorado = InnovationLab_AppliedBI{[Schema=\"dbo\",Item=\"Fato_Perfil_Eleitorado\"]}[Data],\n    #\"Colunas Removidas\" = Table.RemoveColumns(dbo_Fato_Perfil_Eleitorado,{\"Dim_Eleicao\", \"Dim_Local_Votacao\", \"Dim_Perfil_Demografico\"})\nin\n    #\"Colunas Removidas\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação",
+            "modifiedTime": "2026-10-24T21:13:22.67"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2026-10-24T21:13:22.67"
+          }
+        ]
+      },
+      {
+        "name": "Dim_Eleicao",
+        "lineageTag": "368d94c6-4d14-4848-b82f-6b3d2711a959",
+        "modifiedTime": "2026-10-24T21:13:22.65",
+        "structureModifiedTime": "2026-10-30T18:55:48.39",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-10-24T21:13:22.676667",
+            "structureModifiedTime": "2026-10-24T21:13:22.65",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.096667",
+              "refreshedTime": "2026-10-24T21:52:54.096667"
+            }
+          },
+          {
+            "name": "SK_ELEICAO",
+            "dataType": "int64",
+            "sourceColumn": "SK_ELEICAO",
+            "formatString": "0",
+            "lineageTag": "e467e151-6076-47d3-9eb7-a550d6ae822f",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:53:05.043333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.106667",
+              "refreshedTime": "2026-10-24T21:52:54.106667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "DT_ELEICAO",
+            "dataType": "dateTime",
+            "sourceColumn": "DT_ELEICAO",
+            "formatString": "Long Date",
+            "lineageTag": "abd899ae-97a8-4f45-91cf-2cd41ac99242",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.653333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.1",
+              "refreshedTime": "2026-10-24T21:52:54.1"
+            },
+            "variations": [
+              {
+                "name": "Variação",
+                "relationship": "3220295b-7bf3-41cb-b44b-0d4dd93facef",
+                "defaultHierarchy": {
+                  "table": "LocalDateTable_6e789035-db5f-46d6-b0c8-7e3c984846f5",
+                  "hierarchy": "Hierarquia de datas"
+                },
+                "isDefault": true
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "NR_ANO",
+            "dataType": "int64",
+            "sourceColumn": "NR_ANO",
+            "formatString": "0",
+            "lineageTag": "adc86153-37ef-43da-a0a8-e2104819b707",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-30T18:55:48.39",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.106667",
+              "refreshedTime": "2026-10-24T21:52:54.106667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "NR_TURNO",
+            "dataType": "int64",
+            "sourceColumn": "NR_TURNO",
+            "formatString": "0",
+            "lineageTag": "4e8515d5-6f45-45db-b57b-dd4472492796",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-10-24T21:13:22.656667",
+            "structureModifiedTime": "2026-10-24T21:13:22.656667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.106667",
+              "refreshedTime": "2026-10-24T21:52:54.106667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "name": "DS_ELEICAO",
+            "dataType": "string",
+            "sourceColumn": "DS_ELEICAO",
+            "lineageTag": "e048da54-3a7c-4c0b-8e0f-7d72c4cb3e6a",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:13:22.656667",
+            "structureModifiedTime": "2026-10-24T21:13:22.656667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.106667",
+              "refreshedTime": "2026-10-24T21:52:54.106667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Ano_Eleicao",
+            "dataType": "string",
+            "expression": "IF(Dim_Eleicao[NR_ANO] > 0, FORMAT(Dim_Eleicao[NR_ANO], \"0000\"), BLANK())",
+            "lineageTag": "f2bbbb1a-b7e1-4c18-a5b5-578c313f65b1",
+            "modifiedTime": "2026-10-30T19:03:51.073333",
+            "structureModifiedTime": "2026-10-30T18:55:48.39",
+            "refreshedTime": "2026-10-30T18:55:48.493333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-30T18:55:48.493333",
+              "refreshedTime": "2026-10-30T18:55:48.493333"
+            }
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Eleicao",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-10-24T21:13:34.513333",
+            "refreshedTime": "2026-10-24T21:13:34.513333",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Fonte = Sql.Databases(\"25.35.69.146\"),\n    InnovationLab_AppliedBI = Fonte{[Name=\"InnovationLab_AppliedBI\"]}[Data],\n    dbo_Dim_Eleicao = InnovationLab_AppliedBI{[Schema=\"dbo\",Item=\"Dim_Eleicao\"]}[Data],\n    #\"Colunas Removidas\" = Table.RemoveColumns(dbo_Dim_Eleicao,{\"Fato_Comparecimento_Abstencao\", \"Fato_Perfil_Eleitorado\", \"Fato_Votacao\"})\nin\n    #\"Colunas Removidas\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação",
+            "modifiedTime": "2026-10-24T21:13:22.67"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2026-10-24T21:13:22.67"
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_cc7fe456-ad65-40ca-98eb-b0b2dd550997",
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "4340d15b-a018-418a-b9e0-4cabd80f2406",
+        "modifiedTime": "2026-10-24T21:13:22.65",
+        "structureModifiedTime": "2026-10-24T21:13:22.65",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-10-24T21:13:22.676667",
+            "structureModifiedTime": "2026-10-24T21:13:22.65",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.13",
+              "refreshedTime": "2026-10-24T21:52:54.13"
+            }
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "formatString": "General Date",
+            "lineageTag": "f28bea17-8769-4fd8-8add-5527dcbb2b39",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:52:54.13",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.133333",
+              "refreshedTime": "2026-10-24T21:52:54.133333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Ano",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "lineageTag": "4a9d2826-4448-44c5-9e1a-dd8b13aa1e94",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:52:54.143333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "2026-10-24T21:52:54.143333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.143333",
+              "refreshedTime": "2026-10-24T21:52:54.143333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "lineageTag": "382fa6a1-bebe-4eb6-a822-4204d1f1509a",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:52:54.14",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "2026-10-24T21:52:54.14",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.14",
+              "refreshedTime": "2026-10-24T21:52:54.14"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Mês",
+            "dataType": "string",
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "lineageTag": "7392e960-b996-4190-92f0-f07130a7bdea",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:52:54.143333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "2026-10-24T21:52:54.143333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.143333",
+              "refreshedTime": "2026-10-24T21:52:54.143333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "lineageTag": "2ad721d7-c0ed-4872-adb7-2bd7606b553c",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:52:54.146667",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "2026-10-24T21:52:54.146667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.15",
+              "refreshedTime": "2026-10-24T21:52:54.15"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Trimestre",
+            "dataType": "string",
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "lineageTag": "e6a439c4-e89e-4297-94e1-b65d7df77a4f",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:52:54.156667",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "2026-10-24T21:52:54.156667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.156667",
+              "refreshedTime": "2026-10-24T21:52:54.156667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Dia",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "lineageTag": "896d3605-1cb2-4e61-9c1e-b5b6f79837ea",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:52:54.143333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "2026-10-24T21:52:54.143333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.143333",
+              "refreshedTime": "2026-10-24T21:52:54.143333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DateTableTemplate_cc7fe456-ad65-40ca-98eb-b0b2dd550997",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-10-24T21:52:54.13",
+            "refreshedTime": "2026-10-24T21:52:54.13",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hierarquia de datas",
+            "lineageTag": "6c963a94-e1e6-4216-aa47-0253d0e64f9b",
+            "state": "ready",
+            "modifiedTime": "2026-10-24T21:52:54.183333",
+            "structureModifiedTime": "2026-10-24T21:13:22.656667",
+            "refreshedTime": "2026-10-24T21:52:54.183333",
+            "levels": [
+              {
+                "name": "Ano",
+                "ordinal": 0,
+                "column": "Ano",
+                "lineageTag": "46b92025-18d3-4acb-8850-981a09005812",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              },
+              {
+                "name": "Trimestre",
+                "ordinal": 1,
+                "column": "Trimestre",
+                "lineageTag": "7f590011-912e-4c1c-b414-6e02d2d4d0db",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              },
+              {
+                "name": "Mês",
+                "ordinal": 2,
+                "column": "Mês",
+                "lineageTag": "9618e470-0261-4193-ac11-03c21746e331",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              },
+              {
+                "name": "Dia",
+                "ordinal": 3,
+                "column": "Dia",
+                "lineageTag": "b1ac6d33-347b-478c-87e5-0ec7bb1843cf",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true",
+            "modifiedTime": "2026-10-24T21:13:22.67"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy",
+            "modifiedTime": "2026-10-24T21:13:22.67"
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_6e789035-db5f-46d6-b0c8-7e3c984846f5",
+        "isHidden": true,
+        "showAsVariationsOnly": true,
+        "lineageTag": "d8ddeddc-cfb4-45b4-a553-87b11a314d6e",
+        "modifiedTime": "2026-10-24T21:13:22.65",
+        "structureModifiedTime": "2026-10-24T21:13:22.65",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-10-24T21:13:22.676667",
+            "structureModifiedTime": "2026-10-24T21:13:22.65",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.3",
+              "refreshedTime": "2026-10-24T21:52:54.3"
+            }
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "formatString": "General Date",
+            "lineageTag": "03a198f4-b965-4d54-8e0a-cbfb2433c2c5",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:52:54.293333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.306667",
+              "refreshedTime": "2026-10-24T21:52:54.306667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Ano",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "lineageTag": "ab8ccd00-4e41-4a7d-afcb-0e91ddcc749f",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:52:54.346667",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "2026-10-24T21:52:54.346667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.35",
+              "refreshedTime": "2026-10-24T21:52:54.35"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "lineageTag": "060056dc-8339-4089-b1cd-8c7e6b03d5a9",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:52:54.346667",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "2026-10-24T21:52:54.346667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.35",
+              "refreshedTime": "2026-10-24T21:52:54.35"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Mês",
+            "dataType": "string",
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "lineageTag": "b8aba276-7711-4f19-85cc-40ed41636b3a",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:52:54.37",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "2026-10-24T21:52:54.37",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.373333",
+              "refreshedTime": "2026-10-24T21:52:54.373333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "lineageTag": "9e786a97-9f8c-45ab-bb7a-e924afd16780",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:52:54.383333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "2026-10-24T21:52:54.383333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.383333",
+              "refreshedTime": "2026-10-24T21:52:54.383333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Trimestre",
+            "dataType": "string",
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "lineageTag": "91fc43cc-1523-4816-aaf4-1dba89fd414b",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:52:54.45",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "2026-10-24T21:52:54.45",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.453333",
+              "refreshedTime": "2026-10-24T21:52:54.453333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Dia",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "lineageTag": "9ffffb2d-9694-4beb-b674-1634806925aa",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-10-24T21:52:54.343333",
+            "structureModifiedTime": "2026-10-24T21:13:22.653333",
+            "refreshedTime": "2026-10-24T21:52:54.343333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-10-24T21:52:54.346667",
+              "refreshedTime": "2026-10-24T21:52:54.346667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "LocalDateTable_6e789035-db5f-46d6-b0c8-7e3c984846f5",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-10-24T21:52:54.293333",
+            "refreshedTime": "2026-10-24T21:52:54.293333",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(Year(MIN('Dim_Eleicao'[DT_ELEICAO])), 1, 1), Date(Year(MAX('Dim_Eleicao'[DT_ELEICAO])), 12, 31))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hierarquia de datas",
+            "lineageTag": "dbb0dfc5-ae3c-4a79-9a4c-0aaae657de92",
+            "state": "ready",
+            "modifiedTime": "2026-10-24T21:52:54.53",
+            "structureModifiedTime": "2026-10-24T21:13:22.66",
+            "refreshedTime": "2026-10-24T21:52:54.53",
+            "levels": [
+              {
+                "name": "Ano",
+                "ordinal": 0,
+                "column": "Ano",
+                "lineageTag": "821235a7-526a-493f-b0d1-cbb8f700f9a6",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              },
+              {
+                "name": "Trimestre",
+                "ordinal": 1,
+                "column": "Trimestre",
+                "lineageTag": "54f0adb7-5a0a-4883-985a-f5b783c8d2d7",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              },
+              {
+                "name": "Mês",
+                "ordinal": 2,
+                "column": "Mês",
+                "lineageTag": "bbf79416-2d9a-419b-a053-31e11d355268",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              },
+              {
+                "name": "Dia",
+                "ordinal": 3,
+                "column": "Dia",
+                "lineageTag": "bfe5ab55-7eab-4bbf-a59e-481195b4165c",
+                "modifiedTime": "2026-10-24T21:13:22.666667"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy",
+                "modifiedTime": "2026-10-24T21:13:22.67"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true",
+            "modifiedTime": "2026-10-24T21:13:22.67"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "3220295b-7bf3-41cb-b44b-0d4dd93facef",
+        "fromTable": "Dim_Eleicao",
+        "fromColumn": "DT_ELEICAO",
+        "toTable": "LocalDateTable_6e789035-db5f-46d6-b0c8-7e3c984846f5",
+        "toColumn": "Date",
+        "joinOnDateBehavior": "datePartOnly",
+        "state": "ready",
+        "modifiedTime": "2026-10-24T21:52:54.31",
+        "refreshedTime": "2026-10-24T21:52:54.31"
+      },
+      {
+        "name": "c1188d5b-1162-4d75-b1ab-138f57d99bde",
+        "fromTable": "Fato_Votacao",
+        "fromColumn": "SK_CANDIDATO_PARTIDO",
+        "toTable": "Dim_Candidato_Partido",
+        "toColumn": "SK_CANDIDATO_PARTIDO",
+        "state": "ready",
+        "modifiedTime": "2026-10-24T21:53:05.18",
+        "refreshedTime": "2026-10-24T21:53:05.18",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS",
+            "modifiedTime": "2026-10-24T21:53:05.04"
+          }
+        ]
+      },
+      {
+        "name": "0e14230f-d911-4c8c-99b8-a7e423bf164a",
+        "fromTable": "Fato_Votacao",
+        "fromColumn": "SK_ELEICAO",
+        "toTable": "Dim_Eleicao",
+        "toColumn": "SK_ELEICAO",
+        "state": "ready",
+        "modifiedTime": "2026-10-24T21:53:05.18",
+        "refreshedTime": "2026-10-24T21:53:05.18",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS",
+            "modifiedTime": "2026-10-24T21:53:05.04"
+          }
+        ]
+      },
+      {
+        "name": "09692065-dc8d-4d46-bd01-aeb268c2e080",
+        "fromTable": "Fato_Votacao",
+        "fromColumn": "SK_LOCAL_VOTACAO",
+        "toTable": "Dim_Local_Votacao",
+        "toColumn": "SK_LOCAL_VOTACAO",
+        "state": "ready",
+        "modifiedTime": "2026-10-24T21:53:05.18",
+        "refreshedTime": "2026-10-24T21:53:05.18",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS",
+            "modifiedTime": "2026-10-24T21:53:05.04"
+          }
+        ]
+      },
+      {
+        "name": "8e4e25c4-aa17-4499-93ba-3fbbb75fe47a",
+        "fromTable": "Fato_Comparecimento_Abstencao",
+        "fromColumn": "SK_LOCAL_VOTACAO",
+        "toTable": "Dim_Local_Votacao",
+        "toColumn": "SK_LOCAL_VOTACAO",
+        "state": "ready",
+        "modifiedTime": "2026-10-24T21:53:05.166667",
+        "refreshedTime": "2026-10-24T21:53:05.166667",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS",
+            "modifiedTime": "2026-10-24T21:53:05.04"
+          }
+        ]
+      },
+      {
+        "name": "4c0943e2-6176-47d3-9a03-a39617ef7ddd",
+        "fromTable": "Fato_Comparecimento_Abstencao",
+        "fromColumn": "SK_ELEICAO",
+        "toTable": "Dim_Eleicao",
+        "toColumn": "SK_ELEICAO",
+        "state": "ready",
+        "modifiedTime": "2026-10-24T21:53:05.18",
+        "refreshedTime": "2026-10-24T21:53:05.18",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS",
+            "modifiedTime": "2026-10-24T21:53:05.04"
+          }
+        ]
+      },
+      {
+        "name": "bdab4259-d560-4b88-824e-ee105ccbb324",
+        "fromTable": "Fato_Perfil_Eleitorado",
+        "fromColumn": "SK_PERFIL_DEMOGRAFICO",
+        "toTable": "Dim_Perfil_Demografico",
+        "toColumn": "SK_PERFIL_DEMOGRAFICO",
+        "state": "ready",
+        "modifiedTime": "2026-10-24T21:53:05.18",
+        "refreshedTime": "2026-10-24T21:53:05.18",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS",
+            "modifiedTime": "2026-10-24T21:53:05.04"
+          }
+        ]
+      },
+      {
+        "name": "d9bb1f79-af46-4cfa-88bb-f0a5b1905a26",
+        "fromTable": "Fato_Perfil_Eleitorado",
+        "fromColumn": "SK_LOCAL_VOTACAO",
+        "toTable": "Dim_Local_Votacao",
+        "toColumn": "SK_LOCAL_VOTACAO",
+        "state": "ready",
+        "modifiedTime": "2026-10-24T21:53:05.18",
+        "refreshedTime": "2026-10-24T21:53:05.18",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS",
+            "modifiedTime": "2026-10-24T21:53:05.04"
+          }
+        ]
+      },
+      {
+        "name": "db263401-ece7-4645-b56a-b82995b534c9",
+        "fromTable": "Fato_Perfil_Eleitorado",
+        "fromColumn": "SK_ELEICAO",
+        "toTable": "Dim_Eleicao",
+        "toColumn": "SK_ELEICAO",
+        "state": "ready",
+        "modifiedTime": "2026-10-24T21:53:05.18",
+        "refreshedTime": "2026-10-24T21:53:05.18",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS",
+            "modifiedTime": "2026-10-24T21:53:05.04"
+          }
+        ]
+      }
+    ],
+    "cultures": [
+      {
+        "name": "pt-BR",
+        "modifiedTime": "2026-10-24T20:33:38.853333",
+        "structureModifiedTime": "2026-10-24T20:33:38.853333"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1",
+        "modifiedTime": "2026-10-24T20:33:38.863333"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Dim_Candidato_Partido\",\"Fato_Votacao\",\"Dim_Perfil_Demografico\",\"Dim_Local_Votacao\",\"Fato_Comparecimento_Abstencao\",\"Fato_Perfil_Eleitorado\",\"Dim_Eleicao\"]",
+        "modifiedTime": "2026-10-24T21:13:22.666667"
+      }
+    ]
+  }
+}
